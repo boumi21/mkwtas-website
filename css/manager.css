@@ -1,0 +1,26 @@
+.red-border+button {
+    border: solid red 0.4mm;
+}
+
+.bottom-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.tas-not-exist {
+    text-align: center;
+    font-size: x-large;
+    color: red;
+}
+
+.bootstrap-select{
+    z-index: 1300;
+  }
+
+  .container-form-admin{
+    background-color: #dcdcdc;
+    padding: 1rem;
+    border: 0.2rem solid #000;
+    border-radius: 1rem;
+  }

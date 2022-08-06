@@ -1,0 +1,652 @@
+body {
+  background-color: #FDFFFC;
+  /* Padding to prevent nav to overlap body */
+  padding-top: 58px;
+}
+
+tbody {
+  color: #0e0b21;
+}
+
+/* Base color for links on website */
+a {
+  color: #0549e7;
+}
+
+/* Center everything */
+.epic-center{
+  display: grid;
+  place-items: center;
+}
+
+.hide-element{
+  display: none;
+}
+
+
+/* MAIN NAV MENU */
+
+.main-nav {
+  background-color: #1e90ff;
+}
+
+.main-nav .navbar-nav .nav_link_main_nav {
+  color: #EBEBEB;
+}
+
+.nav_link_main_nav:hover{
+  color: #FFFFFF !important;
+}
+
+
+/* MAIN MENU PAGE */
+
+.card_menu {
+  background-color: #efe9f4;
+}
+
+.card-header-menu{
+  background-color: #E1D6EA;
+}
+
+.card-header-menu > h4 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 900;
+  color: #0040d3;
+}
+
+.button_menu {
+  background-color: #57a773;
+}
+
+.button_menu:hover {
+  background-color: #6cb987;
+}
+
+.button_menu span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.button_menu span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.3s;
+}
+
+.button_menu:hover span {
+  padding-right: 15px;
+}
+
+.button_menu:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.img-bottom-menu {
+  width: 70px; /* You can set the dimensions to whatever you want */
+  height: 70px;
+  object-fit: cover;
+  transition: transform .2s; /* Animation */
+}
+
+.img-bottom-menu:hover {
+  transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+#list-player-menu > li:hover{
+  text-decoration: none;
+  background-color: #57a773;
+}
+
+#list-player-menu{
+  text-decoration: none;
+}
+
+
+/* DATATABLES */
+
+/* Extends datatables to 100% of container */
+.dataTables_wrapper {
+  width: 100%;
+}
+
+/* Color for fastest split in a 3laps run */
+.minSplit{
+  color: green;
+}
+
+/* Color for approximate dates on runs */
+.approx {
+  color: rgb(201, 15, 15);
+}
+
+/* Color for time cut on runs */
+.time-cut{
+  font-size: 0.9em;
+  color: #ee6352;
+}
+
+.time-cut > a{
+  color: #ee6352;
+  text-decoration: underline;
+}
+
+td.details-control {
+  background: url(../assets/img/svg/green-plus.svg) no-repeat center center;
+  background-size: 30%;
+  cursor: pointer;
+}
+tr.shown td.details-control {
+  background: url(../assets/img/svg/red-minus.svg) no-repeat center center;
+  background-size: 30%;
+}
+
+table.dataTable tbody td {
+  vertical-align: middle;
+}
+
+.table.dataTable tbody tr {
+  background-color: #dcdcdc;
+}
+
+#empTable_filter input {
+  border-radius: 5px;
+}
+
+/**YADCF**/
+.xs-filter {
+  width: 80px;
+}
+
+.s-filter {
+  width: 121px;
+}
+
+.m-filter {
+  width: 140px;
+}
+
+.table thead {
+  background-color: #a9a9a9;
+}
+
+.table {
+  background-color: #dcdcdc;
+}
+
+.table td {
+  border: black solid 1.1px !important;
+}
+
+.table th {
+  border: black solid 1.1px !important;
+}
+
+.title-open{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+}
+
+/* ICONS FOR SPECIFIC RUNS */
+.record_tag_Unverified{
+  background-image: url(../assets/img/svg/record_tag_unverified.svg);
+  display: inline-block;
+  width: 1.3em;
+  height: 1.3em;
+  vertical-align: middle;
+  background-size: 100% 100%;
+}
+
+.record_tag_Invalid{
+  background-image: url(../assets/img/svg/record_tag_invalid.svg);
+  display: inline-block;
+  width: 1.3em;
+  height: 1.3em;
+  vertical-align: middle;
+  background-size: 100% 100%;
+}
+
+
+/* SNAPSHOT PAGE */
+
+.form-container-date {
+  font-size: 85%;
+}
+
+#form-date .calendar-icon {
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url("../assets/img/svg/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: center right calc(0.375em + 0.1875rem);
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.echo-date {
+  font-family: "Helvetica", sans-serif;
+  font-size: 80%;
+  color: #2f4f4f;
+}
+
+.total-time {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #ff8c00;
+  background-color: #ffdab9;
+}
+
+#icon_time-machine{
+  background-image: url(../assets/img/time-machine.png);
+
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
+  background-size: 100% 100%;
+}
+
+
+
+/* Every table container */
+.tab-container {
+  margin: auto;
+  width: 80%;
+  padding-top: 30px;
+}
+
+.record-table {
+  width: 100%;
+}
+
+.record-table-count {
+  width: 50%;
+  margin: auto;
+}
+
+/* All table's captions */
+caption {
+  caption-side: top;
+  font-size: 29px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 900;
+  color: #0040d3;
+}
+
+/* Tracks and players names */
+.section-name {
+  font-family: "Varela Round", sans-serif;
+}
+
+.button-group-choice {
+  background-color: #d7cfbf;
+}
+
+.link-group-choice {
+  padding: 0.5rem;
+  color: #000 !important;
+}
+
+.link-group-choice.active {
+  background-color: #57a773 !important;
+  color: #1f00ff !important;
+}
+
+.icon-zoom:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.person-logo {
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+.zoom-image:hover {
+  transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+
+
+
+/* FAQ PAGE */
+
+.faq-container {
+  padding-top: 30px;
+}
+
+.card-faq {
+  position: static;
+  background-color: #dcdcdc;
+}
+
+.faq-description > a {
+  color: #484d6d;
+}
+
+.container-creator-logo {
+  width: 45%;
+  margin: auto;
+}
+
+
+/* TRACK PAGE */
+
+#track_name {
+  padding-top: 30px;
+  margin-left: 50px;
+}
+
+.img-button-group {
+  width: 30px;
+  padding-left: 2px;
+  padding-right: 2px;
+  text-align: center;
+}
+
+.track-buttons {
+  width: 80%;
+}
+
+.buttons-track {
+  border-style: solid;
+  border-width: 2px;
+}
+
+.type-record-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px 0px 0px 10px;
+  border-style: outset;
+  border-color: black;
+}
+
+
+/* PLAYER PAGE */
+
+.player-flag{
+  width: 50px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
+.container-form-admin-player{
+  background-color: #dcdcdc;
+  display: inline-block;
+  padding: 0.2rem;
+  border: 0.2rem solid #000;
+  border-radius: 1rem;
+}
+
+
+/* SNACKBAR */
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #8abd5f; /* Green background color */
+  color: #000; /* Black text color */
+  text-align: center; /* Centered text */
+  border-radius: 5px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+}
+
+/* The snackbarError - position it at the bottom and in the middle of the screen */
+#snackbarError {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #ea2b2b; /* Green background color */
+  color: #000; /* Black text color */
+  text-align: center; /* Centered text */
+  border-radius: 5px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbarError.show {
+  visibility: visible; /* Show the snackbar */
+}
+
+
+
+/* NAVBAR */
+
+.navbar-toggler-icon{
+  background-image: url(../assets/img/svg/toggler.svg);
+}
+
+#icon_3laps{
+  background-image: url(../assets/img/svg/3laps.svg); 
+}
+#icon_flaps{
+  background-image: url(../assets/img/svg/flap.svg); 
+}
+
+.nav-icon{
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  background-size: 100% 100%;
+  color: #000;
+}
+
+
+
+
+/* LIST TRACKS PAGE */
+
+.links-listTracks:hover{
+  text-decoration: none;
+}
+
+.li-listTracks{
+  background-color: #dcdcdc;
+}
+
+.li-listTracks:hover{
+  background-color: #F5F5F5;
+}
+
+
+
+/* LIST PLAYERS PAGE */
+
+.list-players {
+  height: 660px;
+  width: 1050px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+  padding-top: 5px;
+  padding-left: 5px;
+  list-style-type: none;
+  margin: auto;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #ee6352;
+  border-radius: 15px;
+  background: #efe9f4;
+}
+
+.list-players-li {
+  font-family: Helvetica, Verdana, sans-serif;
+  font-size: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.list-players-li:last-child {
+  border: none;
+}
+
+.list-players-li a {
+  text-decoration: none;
+  color: #000080;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+  display: block;
+  width: 200px;
+}
+
+.list-players-li a:hover {
+  font-size: 25px;
+  background: #f6f6f6;
+}
+
+
+
+/*************** Stats page ****************************** */
+.stats-nav-link{
+  color: #212529;
+}
+.stats-nav-link:hover{
+  color: #646262;
+}
+
+.stats-nav-link[data-toggle].collapsed:after {
+  content: " ▾";
+}
+.stats-nav-link[data-toggle]:not(.collapsed):after {
+  content: " ▴";
+}
+
+
+
+
+/* READMORE */
+
+.prompt {
+  color: #ffffff;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.prompt:hover {
+  text-decoration: none;
+}
+
+.prompt img {
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
+/* SMALL SCREENS SPECIFIC RULES */
+
+@media (max-width: 900px) {
+
+  /* Give more space to tables on small screens */
+  .padding-horizontal-container {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+
+  /* Give more space to tables on small screens */
+  .tab-container{
+    width: 96%;
+  }
+}
+
+
+
+@media (max-width: 680px) {
+
+  .tab-container {
+    font-size: 80%;
+    z-index: 1;
+  }
+
+  caption {
+    font-size: 1.2rem;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .tab-container {
+    font-size: 65%;
+  }
+
+  caption {
+    font-size: 1rem;
+  }
+
+  .list-players {
+    display: block;
+    width: 300px;
+    height: auto;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .tab-container {
+    font-size: 55%;
+  }
+
+  .link-group-choice {
+    padding: 0.2rem;
+    font-size: 80%;
+  }
+
+  .link-snapshot {
+    font-size: 100%;
+    padding: 0.3rem;
+  }
+
+  .img-button-group {
+    width: 25px;
+  }
+}
+
+@media (min-width: 767px){
+  .navbar-nav-menus{
+    position: relative;
+    margin:0 auto;
+  }
+
+  #username-overflow{
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 60px;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,41 @@
+/* Charts Containers */
+
+.amcharts500 {
+        width: 90%;
+        min-width: 500px;
+        height: 500px;
+        margin: auto;
+    }
+
+.amchartsh1000 {
+    min-width: 1000px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/**********************************/
+
+#sidebar_stat{
+    min-width: 220px;
+    max-width: 220px;
+    background-color: #efe9f4;
+}
+
+#sidebar_stat.active{
+    margin-left: -220px;
+}
+
+
+@media (max-width: 768px) {
+    #sidebar_stat {
+      margin-left: -220px;
+    }
+  
+    #sidebar_stat.active {
+      margin-left: 0;
+    }
+  
+    #sidebarCollapse span {
+      display: none;
+    }
+}
