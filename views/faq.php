@@ -264,6 +264,13 @@ includeHeader(array(
                         <div class="collapse item-7" role="tabpanel" data-parent="#accordion-1">
                             <div class="card-body">
                                 <p class="card-text">
+                                    <b>V 5.0 (2022/08/13) Open Source Update <i class="fab fa-github"></i></b></br>
+                                    * Big code reorganization to make it <a href="<?php echo GITHUB_REPO ?>">public</a>. </br>
+                                    * Removed : unused code, images and libraries. </br>
+                                    * Removed : Possibility to send message from form. </br>
+                                    * A lot of other behinf the scene things. </br>
+                                </p>
+                                <p class="card-text">
                                     <b>V 4.1 (2022/01/16)</b></br>
                                     * TAS runs are now tagged (valid, unverified or invalid). </br>
                                     * Added Tags management for admins. </br>
@@ -384,7 +391,7 @@ includeHeader(array(
                                 </div>
                                 <div class="row">
                                     <div class="col-sm">2022</div>
-                                    <div class="col-sm text-right">V 4.1</div>
+                                    <div class="col-sm text-right">V 5.0</div>
                                 </div>
                             </div>
                         </div>
