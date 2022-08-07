@@ -7,7 +7,7 @@ $discordConfig = parse_ini_file(__DIR__ . '/../settings/config.ini', true)['disc
 
 // Specify you website folder (only for development, empty in production)
 // e.g : If your website is at ".../htdocs/webiste/" , then put "/website/"
-define('SITE_FOLDER', "/tas_wr/");
+define('SITE_FOLDER', "/mkwtas-website/");
 
 define('SITE_ROOT', $_SERVER['DOCUMENT_ROOT'] . SITE_FOLDER);
 

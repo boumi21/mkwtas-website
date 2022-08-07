@@ -11,7 +11,7 @@ password = ""
 
 
 [discord]
-login_url = "http://localhost/tas_wr/php_scripts/authentication/login.php" ; Complete URL to login.php
+login_url = "http://localhost/mkwtas-website/php_scripts/authentication/login.php" ; Complete URL to login.php
 id = "xxxxxxxxx" ; Your Discord Client ID
 secret = "xxxxxxxx" ; Your Discord Client Secret
 
