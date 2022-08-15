@@ -16,6 +16,8 @@ includeHeader(array(
     'description' => "Discover the state of Mario Kart Wii Tool Assisted Speedrunning on " . $wanted_date,
     'title' => "TAS Snapshot " . $wanted_date . " - mkwtas"
 ));
+
+include PHP_INCLUDES . 'imports_js.php';
 ?>
 
 <!-- JS -->

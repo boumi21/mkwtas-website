@@ -10,6 +10,8 @@ includeHeader(array(
     'description' => "Discover all Tool Assisted Speedruns on " . $trackName . " in Mario Kart Wii.",
     'title' => $trackName . " - mkwtas"
 ));
+
+include PHP_INCLUDES . 'imports_js.php';
 ?>
 
 <!-- JS -->

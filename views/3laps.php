@@ -9,6 +9,8 @@ includeHeader(array(
     'description' => "Discover current best know times in Mario Kart Wii TAS (3 Laps).",
     'title' => "3 Laps TAS - mkwtas"
 ));
+
+include PHP_INCLUDES . 'imports_js.php';
 ?>
 
 

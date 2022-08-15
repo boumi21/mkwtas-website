@@ -10,6 +10,8 @@ includeHeader(array(
     'description' => "Frequently Asked Questions for Mario Kart Wii TAS and mkwtas.com.",
     'title' => "FAQ - mkwtas"
 ));
+
+include PHP_INCLUDES . 'imports_js.php';
 ?>
 
 <body>
@@ -264,7 +266,7 @@ includeHeader(array(
                         <div class="collapse item-7" role="tabpanel" data-parent="#accordion-1">
                             <div class="card-body">
                                 <p class="card-text">
-                                    <b>V 5.0 (2022/08/13) Open Source Update <i class="fab fa-github"></i></b></br>
+                                    <b>V 5.0 (2022/08/15) Open Source Update <i class="fab fa-github"></i></b></br>
                                     * Big code reorganization to make it <a href="<?php echo GITHUB_REPO ?>">public</a>. </br>
                                     * Removed : unused code, images and libraries. </br>
                                     * Removed : Possibility to send message from form. </br>

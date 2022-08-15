@@ -8,6 +8,8 @@ includeHeader(array(
     'description' => "Browse all Tracks in Mario Kart Wii.",
     'title' => "Browse Tracks - mkwtas"
 ));
+
+include PHP_INCLUDES . 'imports_js.php';
 ?>
 
 <body>

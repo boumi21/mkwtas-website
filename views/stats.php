@@ -8,6 +8,8 @@ includeHeader(array(
     'description' => "Discover Statistics related to Mario Kart Wii TAS. Including evolution of times, most active players and more.",
     'title' => "Statistics - mkwtas"
 ));
+
+include PHP_INCLUDES . 'imports_js.php';
 ?>
 
 <!-- CSS -->

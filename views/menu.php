@@ -8,6 +8,8 @@ includeHeader(array(
     'description' => "Mario Kart Wii Tool Assisted Speedruns Leaderboards, ressources and more!",
     'title' => "mkwtas.com"
 ));
+
+include PHP_INCLUDES . 'imports_js.php';
 ?>
 
 <body>

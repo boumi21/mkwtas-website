@@ -3,17 +3,20 @@
 
 <?php
 include 'php_includes/imports.php';
-include TEMP . 'snackbar.php';
+
+includeHeader(array(
+    'description' => "Add a new TAS in Mario Kart Wii TAS.",
+    'title' => "Add New TAS - mkwtas"
+));
 
 if (!isUserAdmin()) {
     redirect("menu.php");
 } else {
+    include PHP_INCLUDES . 'imports_js.php';
+    include TEMP . 'snackbar.php';
     displayMessageIfError();
 
-    includeHeader(array(
-        'description' => "Add a new TAS in Mario Kart Wii TAS.",
-        'title' => "Add New TAS - mkwtas"
-    ));
+    
 ?>
 
     <!-- CSS -->

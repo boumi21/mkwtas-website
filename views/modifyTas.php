@@ -3,19 +3,21 @@
 
 <?php
 include 'php_includes/imports.php';
-include TEMP . 'snackbar.php';
+
+includeHeader(array(
+    'description' => "Modify TAS Mario Kart Wii",
+    'title' => "Modify TAS"
+));
 
 if (!isUserAdmin()) {
     redirect("menu.php");
 } else {
     $idTas = $_GET['record'];
 
-    displayMessageIfError();
+    include PHP_INCLUDES . 'imports_js.php';
+    include TEMP . 'snackbar.php';
 
-    includeHeader(array(
-        'description' => "Modify TAS Mario Kart Wii",
-        'title' => "Modify TAS"
-    ));
+    displayMessageIfError();
 ?>
 
     <!-- CSS -->
