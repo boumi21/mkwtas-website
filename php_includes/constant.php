@@ -5,7 +5,7 @@ $discordConfig = parse_ini_file(__DIR__ . '/../settings/config.ini', true)['disc
 
 // USEFULL CONSTANTS //
 
-// Specify you website folder (only for development, empty in production)
+// Specify you website folder (only for development, "/" in production)
 // e.g : If your website is at ".../htdocs/webiste/" , then put "/website/"
 define('SITE_FOLDER', "/mkwtas-website/");
 
