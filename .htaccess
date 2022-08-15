@@ -18,6 +18,9 @@
 RewriteEngine On
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteCond %{HTTPS} !on
+RewriteCond %{HTTP_HOST} ^(?:www\.)?mkwtas\.com(?:.*)$ [nc]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [redirect=301,L]
+
 # Redirect to Discord server
 RewriteRule ^discord(.*)$ https://discord.gg/kpMxGKkGTW [redirect=301,L]
 
