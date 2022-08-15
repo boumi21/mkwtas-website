@@ -43,7 +43,7 @@ define('DISCORD_SECRET', $discordConfig['secret']);
 
 define('DISCORD_ADMINS', $discordConfig['admins']);
 
-define('GITHUB_REPO', 'https://www.qwant.com');
+define('GITHUB_REPO', 'https://github.com/boumi21/mkwtas-website');
 
 include TEMP . 'snackbar.php';
 
