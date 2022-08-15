@@ -10,6 +10,8 @@ includeHeader(array(
     'description' => $playerName . "Player Page. Discover every TAS by this player.",
     'title' => $playerName . " Player Page - mkwtas"
 ));
+
+include PHP_INCLUDES . 'imports_js.php';
 ?>
 
 <!-- JS -->

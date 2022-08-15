@@ -12,6 +12,8 @@ if (!isUserAdmin()) {
         'description' => "Modify infos for player : " . $playerName,
         'title' => "Modify " . $playerName . " infos - mkwtas"
     ));
+
+    include PHP_INCLUDES . 'imports_js.php';
 ?>
 
     <!-- CSS -->

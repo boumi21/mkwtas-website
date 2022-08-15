@@ -8,6 +8,8 @@ includeHeader(array(
     'description' => "Browse all players and contributors that created Mario Kart Wii TAS.",
     'title' => "Browse Players - mkwtas"
 ));
+
+include PHP_INCLUDES . 'imports_js.php';
 ?>
 
 <!-- JS -->

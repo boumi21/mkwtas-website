@@ -13,6 +13,8 @@ if (!isUserAdmin()) {
         'description' => "Add a new player in Mario Kart Wii TAS.",
         'title' => "Add New Player - mkwtas"
     ));
+
+    include PHP_INCLUDES . 'imports_js.php';
     ?>
 
     <!-- CSS -->

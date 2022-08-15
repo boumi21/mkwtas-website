@@ -45,8 +45,6 @@ define('DISCORD_ADMINS', $discordConfig['admins']);
 
 define('GITHUB_REPO', 'https://github.com/boumi21/mkwtas-website');
 
-include TEMP . 'snackbar.php';
-
 
 
 // USEFULL STRINGS //
