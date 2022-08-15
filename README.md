@@ -21,7 +21,7 @@ You can create an [issue](https://github.com/boumi21/mkwtas-website/issues) expl
 You can join the community [Discord](https://mkwtas.com/discord/) and ask for wanted changes here.
 
 ### Dev
-Soon
+[How to contribute wiki](https://github.com/boumi21/mkwtas-website/wiki/Contribute-to-mkwtas)
 
 
 ## Last word
