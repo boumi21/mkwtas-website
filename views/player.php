@@ -29,7 +29,7 @@ includeHeader(array(
                 echo '<img
                     class="player-flag" 
                     data-toggle="tooltip"
-                    src="assets/country-flags/png100px/' . $data['country'] . '.png">';
+                    src="assets/country-flags/png100px/' . strtolower($data['country']) . '.png">';
                 echo '<script type="text/javascript">
                     getCountryName("' . $data["country"] . '");
                     </script>';
