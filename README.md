@@ -16,12 +16,12 @@ Everyone can contribute to the website, including non-developers!
 
 ### Non-Dev
 - #### I have a Github account
-You can create issues explaining the bug, mistake or new functionnality you would like to be added.
+You can create an [issue](https://github.com/boumi21/mkwtas-website/issues) explaining the bug, mistake or new functionnality you would like to be added.
 - #### I don't have a Github account (and I don't want to create one)
 You can join the community [Discord](https://mkwtas.com/discord/) and ask for wanted changes here.
 
 ### Dev
-How to contribute wiki
+Soon
 
 
 ## Last word
