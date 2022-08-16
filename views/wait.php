@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-	<link rel="icon" href="assets/img/favicon.ico" />
+	<link rel="icon" href="../assets/img/favicon.ico" />
 </head>
 
 <body>
 	<div id="wait-container">
-		<img src="assets/img/wait.png" width="320px" alt="Maintenance, please wait">
+		<img src="../assets/img/wait.png" width="320px" alt="Maintenance, please wait">
 		<h1>Coming back very soon!</h1>
 		<h3><i>mkwtas v5 update going on</i></h3>
 		<hr>
