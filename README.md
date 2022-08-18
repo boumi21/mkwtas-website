@@ -8,7 +8,7 @@ The site serves as a speedrun history for [Tool Assisted Speedruns](https://en.w
 For more information, visit the community [Discord](https://mkwtas.com/discord/).
 
 ### The site runs with :
-- PHP 7.4
+- PHP 8.1
 - MariaDB 10.3.34  
 
 ## How to contribute
