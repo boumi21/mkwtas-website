@@ -16,13 +16,21 @@
 /**********************************/
 
 #sidebar_stat{
-    min-width: 220px;
-    max-width: 220px;
-    background-color: #efe9f4;
+  flex-direction: column;
+  align-items: center;
+  min-width: 220px;
+  max-width: 220px;
+  background-color: #efe9f4;
 }
 
 #sidebar_stat.active{
     margin-left: -220px;
+}
+
+.stat-nav-title {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 900;
+  color: #0040d3;
 }
 
 

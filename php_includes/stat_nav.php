@@ -1,6 +1,11 @@
 <!-- Navigation menu for statistics page -->
 
-<div class="col-2 collapse show d-md-flex pt-2 pl-0 min-vh-100" id="sidebar_stat">
+<div class="col-2 collapse show d-md-flex pt-2 pl-0 pr-0 min-vh-100" id="sidebar_stat">
+
+<h2 class="stat-nav-title">Statistics</h2>
+
+<hr>
+
     <ul class="nav flex-column flex-nowrap overflow-hidden">
 
         <li class="nav-item">
@@ -57,6 +62,12 @@
                     </li>
                 </ul>
             </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link stats-nav-link text-truncate" href="https://plausible.io/mkwtas.com" target="_blank">
+                <img class="stat-nav-icon" src="assets/img/favicon.png"> <span class="d-sm-inline">Website</span>
+            </a>
         </li>
     </ul>
 </div>
