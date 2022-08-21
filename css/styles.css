@@ -13,6 +13,10 @@ a {
   color: #0549e7;
 }
 
+hr {
+  width: 100%;
+}
+
 /* Center everything */
 .epic-center{
   display: grid;
@@ -536,6 +540,10 @@ caption {
 }
 .stats-nav-link:hover{
   color: #646262;
+}
+
+.stat-nav-icon {
+  width: 1.3em;
 }
 
 .stats-nav-link[data-toggle].collapsed:after {
