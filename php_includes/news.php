@@ -3,12 +3,16 @@
 
 
 <!-- HTML Part -->
-<a id="link_news" href="<?php echo GITHUB_REPO ?>" target="_blank" rel="noopener">
+<a id="link_news" href="https://plausible.io/mkwtas.com" target="_blank" rel="noopener">
     <div class="card text-white bg-success card-news mb-3">
-        <div class="card-body flex-row-center">
-            <img src="assets/img/github.png" width="60px">
-            <h5 class="ml-3 mr-3"><span class="font-chopsic">mkwtas.com</span> is now on Github</h5>
-            <img src="assets/img/github.png" width="60px">
+        <span class="text-new">New!</span>
+        <div class="card-body">
+            <div class="flex-row-center">
+                <i class="icon-news far fa-chart-bar"></i>
+                <h5 class="ml-3 mr-3"><span class="font-chopsic">mkwtas.com</span> statistics</h5>
+                <i class="icon-news fas fa-chart-line"></i>
+            </div>
+            <i>Accessible from the Statistics menu</i>
         </div>
     </div>
 </a>
@@ -16,6 +20,18 @@
 
 <!-- CSS Part -->
 <style>
+    .text-new {
+        position: absolute;
+        margin-top: 0.5em;
+        margin-left: 1em;
+        font-weight: 800;
+        text-shadow: red 0 0 0.4em;
+    }
+
+    .icon-news {
+        font-size: 3em;
+    }
+
     #link_news {
         text-decoration: none;
         text-align: center;
@@ -33,7 +49,7 @@
         /* Animation */
 
         /* Background gradient */
-        background: linear-gradient(37deg, #232222, #8e4949, #cdc7c7);
+        background: linear-gradient(37deg, #232222, #6657e1, #9c333b);
         background-size: 600% 600%;
 
         -webkit-animation: gradientAnim 10s ease infinite;
