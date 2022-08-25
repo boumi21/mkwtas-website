@@ -6,7 +6,7 @@ include 'php_includes/imports.php';
 
 includeHeader(array(
     'description' => "Mario Kart Wii Tool Assisted Speedruns Leaderboards, ressources and more!",
-    'title' => "mkwtas.com"
+    'title' => "mkwtas.com - Mario Kart Wii TAS Records"
 ));
 
 include PHP_INCLUDES . 'imports_js.php';
