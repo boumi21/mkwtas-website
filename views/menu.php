@@ -30,7 +30,7 @@ include PHP_INCLUDES . 'imports_js.php';
                 </div>
             <?php } ?>
 
-            <?php include PHP_INCLUDES . 'news.php'; ?>
+
 
             <div class="row row-cols-1 row-cols-md-2 h-100">
                 <div class="col mb-4">
