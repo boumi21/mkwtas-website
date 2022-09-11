@@ -11,7 +11,7 @@ define('SITE_FOLDER', "/mkwtas-website/");
 
 define('SITE_ROOT', $_SERVER['DOCUMENT_ROOT'] . SITE_FOLDER);
 
-define('UPLOADS', SITE_ROOT . 'uploads/');
+define('UPLOADS', (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . SITE_FOLDER . 'uploads/');
 
 define('TEMP', SITE_ROOT . 'php_includes/templates/');
 
