@@ -270,7 +270,7 @@ include PHP_INCLUDES . 'imports_js.php';
                                     * Big code reorganization to make it <a href="<?php echo GITHUB_REPO ?>">public</a>. </br>
                                     * Removed : unused code, images and libraries. </br>
                                     * Removed : Possibility to send message from form. </br>
-                                    * A lot of other behinf the scene things. </br>
+                                    * A lot of other behind the scene things. </br>
                                 </p>
                                 <p class="card-text">
                                     <b>V 4.1 (2022/01/16)</b></br>
