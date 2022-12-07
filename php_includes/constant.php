@@ -51,4 +51,4 @@ define('GITHUB_REPO', 'https://github.com/boumi21/mkwtas-website');
 
 $unverifiedDesc = "This run is unconfirmed to sync on a console.";
 $invalidDesc = "This run does not sync on a console.";
-$flapNoBktDesc = "At least one lap of the 3 Laps version is faster than this Flap.";
+$flapNoBktDesc = "At least one lap from the 3lap BKT is faster than this Flap.";

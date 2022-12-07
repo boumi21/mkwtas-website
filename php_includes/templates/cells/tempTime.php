@@ -11,7 +11,7 @@
     echo "<span style='display:none;'>" . $data['tag_name'] . "</span>";
 
     if ($data['flap_no_bkt']) {
-        echo "<img class='icon-zoom mb-1 ml-1' src='assets/img/svg/snail.svg' width='22px' alt='' data-toggle='popover' tabindex='0' data-trigger='focus' data-content='" . $flapNoBktDesc . "' title='Flap no BKT'>";
+        echo "<img class='icon-zoom mb-1 ml-1' src='assets/img/svg/snail.svg' width='22px' alt='' data-toggle='popover' tabindex='0' data-trigger='focus' data-content='" . $flapNoBktDesc . "' title='Flap isn't true BKT'>";
     }
 
     if ($data['is_supergrind'] == 1) {
