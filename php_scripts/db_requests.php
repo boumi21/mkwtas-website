@@ -66,7 +66,7 @@ ORDER BY c.id_track
 $getAllByPlayer = $bdd->prepare('SELECT *
 ,RIGHT(duree, LENGTH(duree) - 4) AS time_record
 ,(
-	SELECT RIGHT(TIMEDIFF(r.time_record, b.duree), LENGTH(b.duree) - 6)
+	SELECT RIGHT(TIMEDIFF(r.time_record, b.duree), LENGTH(b.duree) - 4)
 	FROM record r
 	WHERE b.duree < r.time_record
 		AND r.type_record = b.type_record
@@ -117,7 +117,7 @@ ORDER BY date_record
 $getBKTByPlayer = $bdd->prepare('SELECT *
 ,RIGHT(duree, LENGTH(duree) - 4) AS time_record
 ,(
-	SELECT RIGHT(TIMEDIFF(r.time_record, b.duree), LENGTH(b.duree) - 6)
+	SELECT RIGHT(TIMEDIFF(r.time_record, b.duree), LENGTH(b.duree) - 4)
 	FROM record r
 	WHERE b.duree < r.time_record
 		AND r.type_record = b.type_record
@@ -216,7 +216,7 @@ WHERE id_record IN (
 $getAllTASBKT = $bdd->prepare('SELECT *
 ,RIGHT(duree, LENGTH(duree) - 4) AS time_record
 ,(
-	SELECT RIGHT(TIMEDIFF(r.time_record, b.duree), LENGTH(b.duree) - 6)
+	SELECT RIGHT(TIMEDIFF(r.time_record, b.duree), LENGTH(b.duree) - 4)
 	FROM record r
 	WHERE b.duree < r.time_record
 		AND r.type_record = b.type_record
@@ -266,7 +266,7 @@ ORDER BY date_record DESC
 $getAllByTrackAndCategory = $bdd->prepare('SELECT *
 ,RIGHT(duree, LENGTH(duree) - 4) AS time_record
 ,(
-	SELECT RIGHT(TIMEDIFF(r.time_record, b.duree), LENGTH(b.duree) - 6)
+	SELECT RIGHT(TIMEDIFF(r.time_record, b.duree), LENGTH(b.duree) - 4)
 	FROM record r
 	WHERE b.duree < r.time_record
 		AND r.type_record = b.type_record
@@ -549,7 +549,7 @@ GROUP BY j.name_player
 $getAllSnapshot = $bdd->prepare('SELECT *
 ,RIGHT(duree, LENGTH(duree) - 4) AS time_record
 ,(
-	SELECT RIGHT(TIMEDIFF(r1.time_record, b.duree), LENGTH(b.duree) - 6)
+	SELECT RIGHT(TIMEDIFF(r1.time_record, b.duree), LENGTH(b.duree) - 4)
 	FROM record r1
 	WHERE b.duree < r1.time_record
 		AND r1.type_record = b.type_record
