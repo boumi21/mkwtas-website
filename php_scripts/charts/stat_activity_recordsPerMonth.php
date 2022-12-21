@@ -4,7 +4,7 @@ include '../../php_includes/connect.php';
 
 # Request
 $getChartRecordsPerMonth = $bdd->prepare("SELECT
-COUNT(DISTINCT r.id_record) AS records, ca.y AS year, ca.monthName AS month
+COUNT(DISTINCT r.id_record) AS records, CONVERT(ca.y,char) AS year, ca.monthName AS month
 FROM
 record r
 RIGHT JOIN calendar_table ca ON r.date_record = ca.dt

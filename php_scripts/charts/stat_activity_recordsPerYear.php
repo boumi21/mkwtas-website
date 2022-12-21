@@ -4,7 +4,7 @@ include '../../php_includes/connect.php';
 
 # Request
 $getChartRecordsPerYear = $bdd->prepare("SELECT
-YEAR(r.date_record) AS year,
+CONVERT(YEAR(r.date_record),char) AS year,
 COUNT(*) AS records
 FROM
 record r
