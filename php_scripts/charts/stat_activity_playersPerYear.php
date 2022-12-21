@@ -3,7 +3,7 @@
 include '../../php_includes/connect.php';
 
 # Request
-$getChartPlayersPerYear = $bdd->prepare("SELECT YEAR(r.date_record) AS year, COUNT(DISTINCT j.id_player) AS players, 0 as source_column
+$getChartPlayersPerYear = $bdd->prepare("SELECT CONVERT(YEAR(r.date_record),char) AS year, COUNT(DISTINCT j.id_player) AS players, 0 as source_column
 FROM player j
 INNER JOIN record_with_players p ON j.id_player = p.id_player
 INNER JOIN  record r ON p.id_record = r.id_record
