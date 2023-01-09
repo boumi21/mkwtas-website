@@ -3,16 +3,15 @@
 
 
 <!-- HTML Part -->
-<a id="link_news" href="https://plausible.io/mkwtas.com" target="_blank" rel="noopener">
+<a id="link_news" href="https://forms.gle/XucwuMLYJS4rcMnz6" target="_blank" rel="noopener">
     <div class="card text-white bg-success card-news mb-3">
-        <span class="text-new">New!</span>
+        <span class="text-new">Event!</span>
         <div class="card-body">
             <div class="flex-row-center">
-                <i class="icon-news far fa-chart-bar"></i>
-                <h5 class="ml-3 mr-3"><span class="font-chopsic">mkwtas.com</span> statistics</h5>
-                <i class="icon-news fas fa-chart-line"></i>
+                <h5 class="ml-3 mr-3">2022 MKWii TAS Awards</h5>
+                <i class="icon-news fas fa-award"></i>
             </div>
-            <i>Accessible from the Statistics menu</i>
+            <i>Close on Sunday, 22 January</i>
         </div>
     </div>
 </a>

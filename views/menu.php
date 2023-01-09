@@ -20,6 +20,8 @@ include PHP_INCLUDES . 'imports_js.php';
         <div class="container mt-3">
             <img src="assets/img/logoNew.png" class="mx-auto d-block mb-4" alt="Logo">
 
+            <?php include 'php_includes/news.php' ?>
+
             <!-- Message when user tries to login but not admin -->
             <?php if (isset($_GET['logout'])) { ?>
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
