@@ -8,7 +8,7 @@
         <span class="text-new">Event!</span>
         <div class="card-body">
             <div class="flex-row-center">
-                <h5 class="ml-3 mr-3">2022 MKWii TAS Awards</h5>
+                <h5 class="ml-3 mr-3">2022 MKWii TAS Awards Nominations</h5>
                 <i class="icon-news fas fa-award"></i>
             </div>
             <i>Close on Sunday, 22 January</i>
