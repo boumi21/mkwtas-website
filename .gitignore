@@ -4,7 +4,8 @@ settings/config.ini
 # Prevent from uplaoding ghost files
 uploads/*.rkg
 
-
+# Prevent wiki
+wiki/*
 
 
 
