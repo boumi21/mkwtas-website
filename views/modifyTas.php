@@ -255,14 +255,16 @@ if (!isUserAdmin()) {
                                 } ?>
                             </select>
                             <div id="validationTag" class="invalid-feedback">
-                                Unverified and invalid runs must not have a ghost file.
+                                Verified runs must have a ghost file. <br>
+                                Unverified and invalid runs must not have a ghost file. <br>
+                                Runs uploaded after 2021-11-30 must be verified.
                             </div>
                         </div>
                         <div class="form-group col-md-4">
                             <label>RKG to Upload</label>
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input form-control-file" accept=".rkg" name="rkgfile" id="fileUpload">
+                                    <input type="file" class="custom-file-input form-control-file" accept=".rkg, .csv" name="rkgfile" id="fileUpload">
                                     <?php
                                     $filename = 'uploads/' . $idTas . '.rkg';
                                     if (file_exists($filename)) {
