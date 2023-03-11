@@ -267,8 +267,9 @@ if (!isUserAdmin()) {
                                     <input type="file" class="custom-file-input form-control-file" accept=".rkg, .csv" name="rkgfile" id="fileUpload">
                                     <?php
                                     $filename = 'uploads/' . $idTas . '.rkg';
-                                    if (file_exists($filename)) {
-                                        $labelText = $idTas . ".rkg";
+                                    $ghostFile = getGhostFile($idTas);
+                                    if (!is_null($ghostFile)) {
+                                        $labelText = basename($ghostFile);
                                         $rkgExist = "1";
                                     } else {
                                         $labelText = "Choose file";
@@ -283,8 +284,8 @@ if (!isUserAdmin()) {
 
                                 <?php
 
-                                if (file_exists($filename)) { ?>
-                                    <a class="btn btn-sm btn-info ml-1" href="<?php echo UPLOADS . $idTas ?>.rkg" download id="download">Download
+                                if (!is_null($ghostFile)) { ?>
+                                    <a class="btn btn-sm btn-info ml-1" href="<?php echo UPLOADS . basename($ghostFile) ?>" download id="download">Download
                                         <i class="fas fa-download"></i></a>
                                 <?php } ?>
 
