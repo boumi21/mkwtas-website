@@ -211,7 +211,7 @@ function displaySuperGrind()
 function getGhostFile($idRecord){
     $availableGhostExtensions = array('.rkg', '.csv');
     foreach ($availableGhostExtensions as $value) {
-        $filename = 'uploads/' . $idRecord . $value;
+        $filename = SITE_ROOT . 'uploads/' . $idRecord . $value;
         if (file_exists($filename)) {
             return $filename;
         }

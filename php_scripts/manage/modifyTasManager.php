@@ -63,9 +63,10 @@ try {
 
     # Remove ghost file from the server if needed
     if ($_POST['file-exist'] == "0") {
-        $filename = '../../uploads/' . $_POST['idRecord'] . '.rkg';
-        if (file_exists($filename)) {
-            unlink($filename);
+        $ghostFile = getGhostFile($_POST['idRecord']);
+        print_r($ghostFile);
+        if (!is_null($ghostFile)) {
+            unlink($ghostFile);
         }
     }
 

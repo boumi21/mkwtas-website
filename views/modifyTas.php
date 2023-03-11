@@ -266,7 +266,6 @@ if (!isUserAdmin()) {
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input form-control-file" accept=".rkg, .csv" name="rkgfile" id="fileUpload">
                                     <?php
-                                    $filename = 'uploads/' . $idTas . '.rkg';
                                     $ghostFile = getGhostFile($idTas);
                                     if (!is_null($ghostFile)) {
                                         $labelText = basename($ghostFile);

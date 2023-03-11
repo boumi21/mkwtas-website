@@ -44,8 +44,7 @@ function uploadRkg($idRecord)
 }
 
 /**
- * Create filename with :
- * <$idrecord>.rkg
+ * Create ghost filename
  */
 function changeFileName($idRecord)
 {
