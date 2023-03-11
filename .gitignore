@@ -8,7 +8,7 @@ uploads/*.rkg
 wiki/*
 
 # Prevent .vscode
-.vscode/*
+.vscode/
 
 
 
