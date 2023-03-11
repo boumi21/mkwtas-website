@@ -266,6 +266,11 @@ include PHP_INCLUDES . 'imports_js.php';
                         <div class="collapse item-7" role="tabpanel" data-parent="#accordion-1">
                             <div class="card-body">
                                 <p class="card-text">
+                                    <b>V 5.1 (2023/03/11)</b></br>
+                                    * Rules to upload a TAS reinforced for admins. </br>
+                                    * CSV files can now be uploaded as ghost files. </br>
+                                </p>
+                                <p class="card-text">
                                     <b>V 5.0 (2022/08/15) Open Source Update <i class="fab fa-github"></i></b></br>
                                     * Big code reorganization to make it <a href="<?php echo GITHUB_REPO ?>">public</a>. </br>
                                     * Removed : unused code, images and libraries. </br>
@@ -392,8 +397,8 @@ include PHP_INCLUDES . 'imports_js.php';
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-sm">2022</div>
-                                    <div class="col-sm text-right">V 5.0</div>
+                                    <div class="col-sm">2023</div>
+                                    <div class="col-sm text-right">V 5.1</div>
                                 </div>
                             </div>
                         </div>
