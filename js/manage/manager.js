@@ -272,17 +272,23 @@ function verifyPlayers() {
 // Verify that the tag is matching the presence of ghost file or not
 function verifyTag() {
     var input = $("#inputTag");
-    var ghostFile = $("#fileUpload");
+    var inputDate = $("#inputDate");
 
     if (input.find(":selected").val() == 1) {
         if ($("#hiden-file-exist").val() == "0") {
-            verifyWarningEmpty.push("There is no ghost file.");
-        }
-    } else {
-        if ($("#hiden-file-exist").val() != 0) {
             addWarning(input);
         } else {
             removeWarning(input);
+        }
+    } else {
+        if (Date.parse(inputDate.val()) > Date.parse("2021-11-29")){
+            addWarning(input);
+        } else {
+            if ($("#hiden-file-exist").val() != 0) {
+                addWarning(input);
+            } else {
+                removeWarning(input);
+            }
         }
     }
 }

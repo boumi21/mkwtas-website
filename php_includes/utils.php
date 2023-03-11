@@ -204,3 +204,19 @@ function displaySuperGrind()
 {
 	echo "<img class='icon-zoom mb-1 ml-1' src='assets/img/supergrind.png' width='20px' data-toggle=\"popover\" tabindex='0' data-trigger='focus' data-content='This run utilises a type of rapid-fire hop exploit called supergrinding, which allows you to lose traction with the ground and build up speed.' title=\"Supergrind\">";
 }
+
+/**
+ * Returns the filename of the ghostfile matching the id of a record
+ */
+function getGhostFile($idRecord){
+    $availableGhostExtensions = array('.rkg', '.csv');
+    foreach ($availableGhostExtensions as $value) {
+        $filename = SITE_ROOT . 'uploads/' . $idRecord . $value;
+        if (file_exists($filename)) {
+            return $filename;
+        }
+    }
+    return null;
+}
+
+?>

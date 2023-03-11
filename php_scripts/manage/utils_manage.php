@@ -28,12 +28,12 @@ function uploadRkg($idRecord)
     $fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
     // Check file size
-    if ($_FILES["rkgfile"]["size"] > 2000000) {
-        throw new Exception("File too big (max 2Mo)", 1001);
+    if ($_FILES["rkgfile"]["size"] > 20000000) {
+        throw new Exception("File too big (max 20Mo)", 1001);
     }
 
     // Allow certain file formats
-    if ($fileType != "rkg") {
+    if (!in_array($fileType, array("rkg", "csv"))) {
         throw new Exception("Invalid fyle type", 1002);
     }
 
@@ -44,8 +44,7 @@ function uploadRkg($idRecord)
 }
 
 /**
- * Create filename with :
- * <$idrecord>.rkg
+ * Create ghost filename
  */
 function changeFileName($idRecord)
 {

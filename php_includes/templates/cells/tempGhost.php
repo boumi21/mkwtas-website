@@ -1,13 +1,14 @@
 <td>
     <?php
-    $filename = 'uploads/' . $data['id_record'] . '.rkg';
 
-    if (file_exists($filename)) { ?>
+    $ghostFile = getGhostFile($data['id_record']);
+
+    if (!is_null($ghostFile)) { ?>
 
         <!-- Hidden text for ghost filter -->
         <span style="display:none;">yes_ghost</span>
 
-        <a class="btn btn-primary" href="<?php echo UPLOADS . $data['id_record'] ?>.rkg" download id="download">Download
+        <a class="btn btn-primary" href="<?php echo UPLOADS . basename($ghostFile) ?>" download id="download">Download
             <i class="fas fa-download"></i></a>
     <?php } else { ?>
 
