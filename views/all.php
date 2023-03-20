@@ -33,7 +33,7 @@ include PHP_INCLUDES . 'imports_js.php';
                     </div>
                     <div class="d-lg-flex justify-content-lg-start align-items-lg-start justify-content-xl-start record-table">
                         <table class="detailRow table table-sm" id="empTable" hidden>
-                            <caption class="text-center"> <?php echo $count; ?> TASes BKT in total
+                            <caption class="text-center"> <?php echo $count; ?> TAS BKTs in total
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#filterModal">
                                     Filters <i class="fas fa-filter"></i>
