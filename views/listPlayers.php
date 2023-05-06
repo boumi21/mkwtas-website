@@ -40,7 +40,8 @@ include PHP_INCLUDES . 'imports_js.php';
                 while ($data = $getAllPlayers->fetch()) {
                 ?>
                     <li class="list-players-li">
-                        <?php echo "<a href=player.php?name=" . str_replace(' ', '_', $data['name_player']) . ">" . $data['name_player'] ?>
+                        <?php echo "<img class='mr-1' src='assets/country-flags/svg/" . strtolower($data['country']) . ".svg' width='28px' >"; ?>
+                        <?php echo "<a href=player.php?name=" . str_replace(' ', '_', $data['name_player']) . ">" . $data['name_player'] . "</a>" ?>
                     </li>
                 <?php
                 }

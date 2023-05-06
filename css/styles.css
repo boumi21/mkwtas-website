@@ -508,6 +508,12 @@ caption {
   font-family: Helvetica, Verdana, sans-serif;
   font-size: 20px;
   border-bottom: 1px solid #ccc;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
 }
 
 .list-players-li:last-child {
@@ -517,17 +523,10 @@ caption {
 .list-players-li a {
   text-decoration: none;
   color: #000080;
-
-  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
-  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
-  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
-  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
-  transition: font-size 0.3s ease, background-color 0.3s ease;
-  display: block;
   width: 200px;
 }
 
-.list-players-li a:hover {
+.list-players-li:hover {
   font-size: 25px;
   background: #f6f6f6;
 }
