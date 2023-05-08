@@ -19,12 +19,12 @@ include PHP_INCLUDES . 'imports_js.php';
 
     <?php include 'php_includes/nav.php' ?>
 
-    <div class="main-container mt-2 mb-4">
+    <div class="main-container mt-5 mb-4">
         <h4 class="text-center mb-4 pt-2">
             <?php
             $countAllPlayers->execute();
             $data = $countAllPlayers->fetch();
-            echo "There are currently <b>" . $data['nbrJoueurs'] . "</b> TASers on the site.";
+            echo "There are currently <b>" . $data['nbrJoueurs'] . "</b> TASers on the site";
             $countAllPlayers->closeCursor();
             ?>
         </h4>
