@@ -33,22 +33,22 @@ include PHP_INCLUDES . 'imports_js.php';
             <input class="form-control mx-auto w-75" id="input_searchPlayer" type="text" placeholder="Search.." autofocus>
         </div>
 
-        <section class="mx-auto list-container">
-            <ul id="listPlayers" class="list-group list-players">
+            <ul id="listPlayers" class="list-group list-players d-flex flex-row flex-wrap mt-5">
                 <?php
                 $getAllPlayers->execute();
                 while ($data = $getAllPlayers->fetch()) {
                 ?>
+                <?php echo "<a class='w-25' href=player.php?name=" . str_replace(' ', '_', $data['name_player']) . ">"; ?>
                     <li class="list-players-li">
                         <?php echo "<img class='mr-1' src='assets/country-flags/svg/" . strtolower($data['country']) . ".svg' width='28px' >"; ?>
-                        <?php echo "<a href=player.php?name=" . str_replace(' ', '_', $data['name_player']) . ">" . $data['name_player'] . "</a>" ?>
+                        <?php echo $data['name_player'] ?>
                     </li>
+                </a>
                 <?php
                 }
                 $getAllPlayers->closeCursor();
                 ?>
             </ul>
-        </section>
     </div>
 </body>
 
