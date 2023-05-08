@@ -35,16 +35,21 @@ include PHP_INCLUDES . 'imports_js.php';
 
             <ul id="listPlayers" class="list-group list-players d-flex flex-row flex-wrap mt-5">
                 <?php
+
+                $countryArray = getCodeToCountryArray();
+                
                 $getAllPlayers->execute();
                 while ($data = $getAllPlayers->fetch()) {
-                ?>
-                <?php echo "<a class='w-25' href=player.php?name=" . str_replace(' ', '_', $data['name_player']) . ">"; ?>
-                    <li class="list-players-li">
-                        <?php echo "<img class='mr-1' src='assets/country-flags/svg/" . strtolower($data['country']) . ".svg' width='28px' >"; ?>
+
+                    $countryName = getCountryNameFromCode($countryArray, $data['country']);
+                    
+                    echo "<a class='w-25 list-players-li' href=player.php?name=" . str_replace(' ', '_', $data['name_player']) . ">"; ?>
+                    <li class="">
+                        <?php echo "<img class='mr-1' src='assets/country-flags/svg/" . strtolower($data['country']) . ".svg' data-toggle='tooltip' data-placement='left' title='" . $countryName . "' width='28px' >"; ?>
                         <?php echo $data['name_player'] ?>
                     </li>
-                </a>
-                <?php
+                    </a>
+                    <?php
                 }
                 $getAllPlayers->closeCursor();
                 ?>

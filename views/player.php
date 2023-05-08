@@ -28,13 +28,14 @@ include PHP_INCLUDES . 'imports_js.php';
                 $getInfoPlayer->execute(array($playerName));
                 $data = $getInfoPlayer->fetch();
                 $getInfoPlayer->closeCursor();
+
+                $countryArray = getCodeToCountryArray();
+                $countryName = getCountryNameFromCode($countryArray, $data['country']);
+
                 echo '<img
                     class="player-flag" 
                     data-toggle="tooltip"
-                    src="assets/country-flags/png100px/' . strtolower($data['country']) . '.png">';
-                echo '<script type="text/javascript">
-                    getCountryName("' . $data["country"] . '");
-                    </script>';
+                    src="assets/country-flags/png100px/' . strtolower($data['country']) . '.png" title="' . $countryName . '">';
                 ?>
 
                 <?php
