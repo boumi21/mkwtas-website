@@ -44,26 +44,3 @@ function collapseTable(element, tabNumber) {
     $(element).text('Show');
   }
 }
-
-/**
- * Get the country name from a country code
- * @param {string} countryCode that is stored in the player's table on the database
- */
-function getCountryName(countryCode) {
-  var json = null;
-  $.ajax({
-    'async': false,
-    'url': "assets/country-flags/countries.json",
-    'dataType': "json",
-    'success': function (data) {
-      json = data;
-    }
-  });
-  $.each(json, function (i, v) {
-    if (i.toUpperCase() === countryCode.toUpperCase()) {
-      var img = $(".player-flag");
-      img.attr("title", v);
-      return;
-    }
-  });
-}
