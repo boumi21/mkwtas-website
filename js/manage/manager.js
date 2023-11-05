@@ -144,7 +144,7 @@ function verify() {
         verifyUrl();
         verifyLaps();
         verifyPlayers();
-        verifyTag();
+        //verifyTag(); -> Temporary
         if (!isFlap()) {
             verifyCorrectTime();
         }
