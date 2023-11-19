@@ -1,6 +1,6 @@
 <head>
     <!-- Snipped for Plausible (analytics). See https://plausible.io/docs -->
-    <script defer data-domain="mkwtas.com" data-api="/stats/api/event" src="/stats/js/script.js"></script>
+    <script defer data-domain="mkwtas.com" data-api="/stats_plausible/api/event" src="/stats_plausible/js/script.js"></script>
 
 
     <meta name="Description" content="<?php echo $description ?>">
