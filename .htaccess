@@ -29,9 +29,14 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [redirect=301,L]
 # Redirect to Discord server
 RewriteRule ^discord(.*)$ https://discord.gg/kpMxGKkGTW [redirect=301,L]
 
+# Redirect to router
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)$ router.php?url=$1 [QSA,L]
+
+# Remove .php extension
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]
 
 ######### End Customs redirects #########
 

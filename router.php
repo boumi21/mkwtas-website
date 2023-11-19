@@ -16,6 +16,8 @@ $routeRedirect = $viewsFolder . $url;
 
 if(file_exists($routeRedirect)){
     REQUIRE __DIR__ . "/" . $routeRedirect;
+} elseif(file_exists($routeRedirect . ".php")) {
+    REQUIRE __DIR__ . "/" . $routeRedirect . ".php";
 } else {
     // TODO : redirect to 404 page
     REQUIRE __DIR__ . "/" . $viewsFolder . "menu.php";

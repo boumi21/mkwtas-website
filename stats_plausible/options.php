@@ -2,7 +2,7 @@
 
 // Set the relative URI when the reverse proxy is running in a folder.
 // If your proxy runs under https://example.com/stats, then set /stats as relative URI and otherwise just leave the string blank.
-$relativeUri = '/stats';
+$relativeUri = '/stats_plausible';
 
 // Set all allowed URI which should be accessible trough the proxy
 $whitelist = [
