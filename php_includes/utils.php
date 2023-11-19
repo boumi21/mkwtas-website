@@ -219,4 +219,24 @@ function getGhostFile($idRecord){
     return null;
 }
 
+/**
+ * Returns the json file with country codes to their names as an array
+ */
+function getCodeToCountryArray(){
+    $string = file_get_contents("assets/country-flags/countries.json");
+    return json_decode($string);
+}
+
+
+/**
+ * Retrieve the country name matching the country code
+ */
+function getCountryNameFromCode($countryArray, $countryCode){
+    foreach ($countryArray as $key => $value) {
+        if (strtoupper($key) == strtoupper($countryCode)) {
+            return $value;
+        }
+    }
+}
+
 ?>

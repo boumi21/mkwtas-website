@@ -174,7 +174,7 @@ ORDER BY t1.date_record
 
 /*****Select all players from database********/
 $getAllPlayers = $bdd->prepare('
-	SELECT name_player, id_player
+	SELECT name_player, id_player, country
 	FROM player
 	ORDER BY name_player'
 );
