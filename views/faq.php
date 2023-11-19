@@ -267,9 +267,9 @@ include PHP_INCLUDES . 'imports_js.php';
                             <div class="card-body">
                                 <p class="card-text">
                                     <b>V 5.2 (2023/11/19)</b></br>
-                                    * New "list of players" page. </br>
+                                    * <i>list of players</i> page reworked. </br>
                                     * All vehicles names are NA version. </br>
-                                    * You can access a page without the .php exetension in the URL. </br>
+                                    * You can access a page without the <i>.php</i> extension in the URL. </br>
                                 </p>
                                 <p class="card-text">
                                     <b>V 5.1 (2023/03/11)</b></br>
