@@ -22,6 +22,7 @@ am4core.ready(function () {
         
         var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
         valueAxis.renderer.minWidth = 50;
+        valueAxis.extraMax = 0.01;
         valueAxis.tooltip.disabled = true;
 
         var title = chart.titles.create();
@@ -40,7 +41,7 @@ am4core.ready(function () {
 
         var labelBullet = series.bullets.push(new am4charts.LabelBullet());
         labelBullet.label.verticalCenter = "bottom";
-        labelBullet.label.dy = -10;
+        labelBullet.label.dy = -5;
         labelBullet.label.text = "{values.valueY.workingValue}";
         labelBullet.tooltipText = "{values.valueY.workingValue}";
         
