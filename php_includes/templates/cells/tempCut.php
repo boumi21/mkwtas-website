@@ -7,9 +7,9 @@
         <span class="time-cut">
             <?php
             if ($data['prev_lien'] == '') {
-                echo "-" . $timeCutDisplay;
+                echo $timeCutDisplay;
             } else {
-                echo "<a href=" . $data['prev_lien'] . " target='_blank' rel='noopener'>-" . $timeCutDisplay;
+                echo "<a href=" . $data['prev_lien'] . " target='_blank' rel='noopener'>" . $timeCutDisplay;
             ?>
         </span>
     <?php } ?></a>
