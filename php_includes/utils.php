@@ -20,12 +20,12 @@ abstract class TableType
  * Array that maps every technical category's name to it's more user friendly alternative
  */
 $arrayCategorieToText = array(
-	"classic" => "3 laps - Unrestricted",
-	"no_glitch" => "3 laps - No Glitch",
-	"no_cut" => "3 laps - No Ultra",
-	"flap" => "Flap - Unrestricted",
-	"flap_no_glitch" => "Flap - No Glitch",
-	"flap_no_cut" => "Flap - No Ultra",
+	"classic" => "Unrestricted 3laps",
+	"no_cut" => "No Ultra 3laps",
+	"no_glitch" => "No Glitch/SC 3laps",
+	"flap" => "Unrestricted Flaps",
+	"flap_no_cut" => "No Ultra Flaps",
+	"flap_no_glitch" => "No Glitch/SC Flaps",
 );
 
 /**
