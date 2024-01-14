@@ -24,7 +24,7 @@ include PHP_INCLUDES . 'imports_js.php';
             <section class="mx-auto tab-container padding-horizontal-container">
                 <div class="d-lg-flex justify-content-lg-start align-items-lg-start justify-content-xl-start record-table">
                     <table class="detailRow table table-sm data-table">
-                        <caption class="text-center">3 Laps Unrestricted <button type="button" class="btn btn-outline-secondary btn-sm collapsible" onclick="collapseTable(this, 1)">Hide</button></caption>
+                        <caption class="text-center">Unrestricted 3laps <button type="button" class="btn btn-outline-secondary btn-sm collapsible" onclick="collapseTable(this, 1)">Hide</button></caption>
                         <?php include TEMP_THEAD . 'classic.php' ?>
                         <tbody class="tab1">
                             <?php
@@ -60,7 +60,7 @@ include PHP_INCLUDES . 'imports_js.php';
             <section class="mx-auto tab-container padding-horizontal-container">
                 <div class="d-lg-flex justify-content-lg-start align-items-lg-start justify-content-xl-start record-table">
                     <table class=" detailRow table table-sm data-table">
-                        <caption class="text-center">3 Laps No Glitch No Shortcut <button type="button" class="btn btn-outline-secondary btn-sm collapsible" onclick="collapseTable(this, 2)">Hide</button></caption>
+                        <caption class="text-center">No Glitch/SC 3laps <button type="button" class="btn btn-outline-secondary btn-sm collapsible" onclick="collapseTable(this, 2)">Hide</button></caption>
                         <?php include TEMP_THEAD . 'classic.php' ?>
                         <tbody class="tab2">
 
@@ -98,7 +98,7 @@ include PHP_INCLUDES . 'imports_js.php';
             <section class="mx-auto tab-container padding-horizontal-container">
                 <div class="d-lg-flex justify-content-lg-start align-items-lg-start justify-content-xl-start record-table">
                     <table class=" detailRow table table-sm data-table">
-                        <caption class="text-center">3 Laps No Ultra Shortcut <button type="button" class="btn btn-outline-secondary btn-sm collapsible" onclick="collapseTable(this, 3)">Hide</button></caption>
+                        <caption class="text-center">No Ultra 3laps <button type="button" class="btn btn-outline-secondary btn-sm collapsible" onclick="collapseTable(this, 3)">Hide</button></caption>
                         <?php include TEMP_THEAD . 'classic.php' ?>
                         <tbody class="tab3">
 

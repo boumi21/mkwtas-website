@@ -863,23 +863,23 @@ function getTracksData() {
     }];
 
     var categoryData = [{
-        value: "3 laps - Unrestricted",
-        label: "3 laps - Unrestricted"
+        value: "Unrestricted 3laps",
+        label: "Unrestricted 3laps"
     }, {
-        value: "3 laps - No Glitch",
-        label: "3 Laps No Glitch"
+        value: "No Glitch/SC 3laps",
+        label: "No Glitch/SC 3laps"
     }, {
-        value: "3 laps - No Ultra",
-        label: "3 laps - No Ultra"
+        value: "No Ultra 3laps",
+        label: "No Ultra 3laps"
     }, {
-        value: "Flap - Unrestricted",
-        label: "Flap - Unrestricted"
+        value: "Unrestricted Flaps",
+        label: "Unrestricted Flaps"
     }, {
-        value: "Flap - No Glitch",
-        label: "Flap - No Glitch"
+        value: "No Glitch/SC Flaps",
+        label: "No Glitch/SC Flaps"
     }, {
-        value: "Flap - No Ultra",
-        label: "Flap - No Ultra"
+        value: "No Ultra Flaps",
+        label: "No Ultra Flaps"
     }];
     return { trackData, categoryData };
 }
