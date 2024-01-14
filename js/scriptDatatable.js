@@ -866,20 +866,20 @@ function getTracksData() {
         value: "Unrestricted 3laps",
         label: "Unrestricted 3laps"
     }, {
-        value: "No Glitch/SC 3laps",
-        label: "No Glitch/SC 3laps"
-    }, {
         value: "No Ultra 3laps",
         label: "No Ultra 3laps"
+    }, {
+        value: "No Glitch/SC 3laps",
+        label: "No Glitch/SC 3laps"
     }, {
         value: "Unrestricted Flaps",
         label: "Unrestricted Flaps"
     }, {
-        value: "No Glitch/SC Flaps",
-        label: "No Glitch/SC Flaps"
-    }, {
         value: "No Ultra Flaps",
         label: "No Ultra Flaps"
+    }, {
+        value: "No Glitch/SC Flaps",
+        label: "No Glitch/SC Flaps"
     }];
     return { trackData, categoryData };
 }

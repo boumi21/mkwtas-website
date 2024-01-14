@@ -21,11 +21,11 @@ abstract class TableType
  */
 $arrayCategorieToText = array(
 	"classic" => "Unrestricted 3laps",
-	"no_glitch" => "No Glitch/SC 3laps",
 	"no_cut" => "No Ultra 3laps",
+	"no_glitch" => "No Glitch/SC 3laps",
 	"flap" => "Unrestricted Flaps",
-	"flap_no_glitch" => "No Glitch/SC Flaps",
 	"flap_no_cut" => "No Ultra Flaps",
+	"flap_no_glitch" => "No Glitch/SC Flaps",
 );
 
 /**

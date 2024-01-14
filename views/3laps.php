@@ -56,6 +56,42 @@ include PHP_INCLUDES . 'imports_js.php';
                 </div>
             </section>
 
+            <section class="mx-auto tab-container padding-horizontal-container">
+                <div class="d-lg-flex justify-content-lg-start align-items-lg-start justify-content-xl-start record-table">
+                    <table class=" detailRow table table-sm data-table">
+                        <caption class="text-center">No Ultra 3laps <button type="button" class="btn btn-outline-secondary btn-sm collapsible" onclick="collapseTable(this, 3)">Hide</button></caption>
+                        <?php include TEMP_THEAD . 'classic.php' ?>
+                        <tbody class="tab3">
+
+                            <?php
+                            $getBktFromCategory->execute(array($arrayTextToCategory['classicNoUltra'], $arrayTextToCategory['classicNoUltra']));
+                            while ($data = $getBktFromCategory->fetch()) {
+                            ?>
+
+                                <tr>
+                                    <td data-table-type="<?php echo TableType::Classic ?>"></td>
+                                    <?php include TEMP_CELLS . 'tempTrack.php' ?>
+                                    <?php include TEMP_CELLS . 'tempTime.php' ?>
+                                    <?php include TEMP_CELLS . 'tempPlayers.php' ?>
+                                    <?php include TEMP_CELLS . 'tempDate.php' ?>
+                                    <?php include TEMP_CELLS . 'tempCharacter.php' ?>
+                                    <?php include TEMP_CELLS . 'tempVehicle.php' ?>
+                                    <?php include TEMP_CELLS . 'tempDuration.php' ?>
+                                    <?php include TEMP_CELLS . 'tempCut.php' ?>
+                                    <?php include TEMP_CELLS . 'tempSplits.php' ?>
+                                    <?php include TEMP_CELLS . 'tempGhost.php' ?>
+                                </tr>
+
+                            <?php
+                            }
+                            $getBktFromCategory->closeCursor();
+                            ?>
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
 
             <section class="mx-auto tab-container padding-horizontal-container">
                 <div class="d-lg-flex justify-content-lg-start align-items-lg-start justify-content-xl-start record-table">
@@ -94,42 +130,6 @@ include PHP_INCLUDES . 'imports_js.php';
                 </div>
             </section>
 
-
-            <section class="mx-auto tab-container padding-horizontal-container">
-                <div class="d-lg-flex justify-content-lg-start align-items-lg-start justify-content-xl-start record-table">
-                    <table class=" detailRow table table-sm data-table">
-                        <caption class="text-center">No Ultra 3laps <button type="button" class="btn btn-outline-secondary btn-sm collapsible" onclick="collapseTable(this, 3)">Hide</button></caption>
-                        <?php include TEMP_THEAD . 'classic.php' ?>
-                        <tbody class="tab3">
-
-                            <?php
-                            $getBktFromCategory->execute(array($arrayTextToCategory['classicNoUltra'], $arrayTextToCategory['classicNoUltra']));
-                            while ($data = $getBktFromCategory->fetch()) {
-                            ?>
-
-                                <tr>
-                                    <td data-table-type="<?php echo TableType::Classic ?>"></td>
-                                    <?php include TEMP_CELLS . 'tempTrack.php' ?>
-                                    <?php include TEMP_CELLS . 'tempTime.php' ?>
-                                    <?php include TEMP_CELLS . 'tempPlayers.php' ?>
-                                    <?php include TEMP_CELLS . 'tempDate.php' ?>
-                                    <?php include TEMP_CELLS . 'tempCharacter.php' ?>
-                                    <?php include TEMP_CELLS . 'tempVehicle.php' ?>
-                                    <?php include TEMP_CELLS . 'tempDuration.php' ?>
-                                    <?php include TEMP_CELLS . 'tempCut.php' ?>
-                                    <?php include TEMP_CELLS . 'tempSplits.php' ?>
-                                    <?php include TEMP_CELLS . 'tempGhost.php' ?>
-                                </tr>
-
-                            <?php
-                            }
-                            $getBktFromCategory->closeCursor();
-                            ?>
-
-                        </tbody>
-                    </table>
-                </div>
-            </section>
 
 
             <section class="mx-auto tab-container padding-horizontal-container">
