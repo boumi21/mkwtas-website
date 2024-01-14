@@ -172,7 +172,7 @@ include PHP_INCLUDES . 'imports_js.php';
                     </a>
                 </div>
                 <div class="col-6 col-sm-2">
-                    <a href="https://www.youtube.com/watch?v=O1BHac3pw6w&t=2s" target="_blank" rel="noopener" data-toggle="tooltip" data-placement="top" title="( ͡* ͜ʖ ͡*)">
+                    <a href="https://youtu.be/1zUJzzRu-xs?si=miP8NgV-6LVfP9aY" target="_blank" rel="noopener" data-toggle="tooltip" data-placement="top" title="( ͡* ͜ʖ ͡*)">
                         <img src="assets/img/svg/alien.svg" alt="Surprise button" class="img-bottom-menu mx-auto d-block">
                     </a>
                 </div>

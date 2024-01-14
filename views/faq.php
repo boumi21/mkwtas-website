@@ -266,6 +266,11 @@ include PHP_INCLUDES . 'imports_js.php';
                         <div class="collapse item-7" role="tabpanel" data-parent="#accordion-1">
                             <div class="card-body">
                                 <p class="card-text">
+                                    <b>V 5.3 (2024/01/14)</b></br>
+                                    * Categories renamed and reordered. </br>
+                                    * Hyphen removed before timecut. </br>
+                                </p>
+                                <p class="card-text">
                                     <b>V 5.2 (2023/11/19)</b></br>
                                     * <i>list of players</i> page reworked. </br>
                                     * All vehicles names are NA version. </br>
@@ -403,8 +408,8 @@ include PHP_INCLUDES . 'imports_js.php';
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-sm">2023</div>
-                                    <div class="col-sm text-right">V 5.2</div>
+                                    <div class="col-sm">2024</div>
+                                    <div class="col-sm text-right">V 5.3</div>
                                 </div>
                             </div>
                         </div>
