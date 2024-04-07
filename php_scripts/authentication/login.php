@@ -38,7 +38,7 @@ $addConnectLog->execute([
 
 // if user not admin -> logout
 if(!$isAdmin){
-    redirect("logout.php?logout=noAdmin");
+    logout(true);
 # Else redirect to home page once all data has been fetched
 } else{
     redirect("../../menu.php");

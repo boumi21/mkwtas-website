@@ -61,4 +61,22 @@ function isUserAdmin(){
     }
 }
 
+
+# Logout a user / destroy session
+function logout($isNotAdmin = false){
+
+# Starting the session
+session_start();
+
+# Closing the session and deleting all values associated with the session
+session_destroy();
+
+# Redirecting the user back to the main menu
+if($isNotAdmin){
+    redirect("../../menu.php?logout=noAdmin");
+} else {
+    redirect("../../menu.php");
+}
+}
+
 ?>
