@@ -7,3 +7,4 @@ require DB_CONNECT;
 require 'requests.php';
 require 'utils_manage.php';
 require AUTHENT_SCRIPTS . "discord.php";
+require_once AUTHENT_SCRIPTS . "functions.php";

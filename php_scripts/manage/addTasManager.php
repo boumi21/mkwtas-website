@@ -6,6 +6,9 @@ require 'imports_manage.php';
 
 include PHP_INCLUDES . 'utils.php';
 
+// Prevent non-admin users to call the script
+logoutUserIfNotAdmin();
+
 $possedeArray = array();
 
 try {

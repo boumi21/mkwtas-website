@@ -4,6 +4,9 @@
 
 require 'imports_manage.php';
 
+// Prevent non-admin users to call the script
+logoutUserIfNotAdmin();
+
 try {
     $bdd->beginTransaction();
 
