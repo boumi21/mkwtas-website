@@ -16,7 +16,7 @@ require 'requests.php';
 
 # Including all the required scripts for demo
 require "discord.php";
-require "functions.php";
+require_once "functions.php";
 
 # Initializing all the required values for the script to work
 init(LOGIN_URL, DISCORD_ID, DISCORD_SECRET);

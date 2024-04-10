@@ -5,6 +5,8 @@
  * @copyright : https://markis.dev
  */
 
+ require_once "functions.php";
+
  # Starting session so we can store all the variables
 session_start();
 
@@ -62,6 +64,8 @@ function get_user()
     $response = curl_exec($curl);
     curl_close($curl);
     $results = json_decode($response, true);
+    // Do not set the user info in session if he is not admin
+    logoutUserIfNotAdmin($results['id']);
     $_SESSION['user'] = $results;
     $_SESSION['username'] = $results['username'];
     $_SESSION['discrim'] = $results['discriminator'];

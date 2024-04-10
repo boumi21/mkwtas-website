@@ -6,7 +6,7 @@
  */
 
 # Including all the required scripts for demo
-require "functions.php";
+require_once "functions.php";
 
 logout(false);
 
