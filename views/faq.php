@@ -266,6 +266,10 @@ include PHP_INCLUDES . 'imports_js.php';
                         <div class="collapse item-7" role="tabpanel" data-parent="#accordion-1">
                             <div class="card-body">
                                 <p class="card-text">
+                                    <b>V 5.4 (2024/04/11)</b></br>
+                                    * Improved security to access admin tools. </br>
+                                </p>
+                                <p class="card-text">
                                     <b>V 5.3 (2024/01/14)</b></br>
                                     * Categories renamed and reordered. </br>
                                     * Hyphen removed before timecut. </br>
@@ -409,7 +413,7 @@ include PHP_INCLUDES . 'imports_js.php';
                                 </div>
                                 <div class="row">
                                     <div class="col-sm">2024</div>
-                                    <div class="col-sm text-right">V 5.3</div>
+                                    <div class="col-sm text-right">V 5.4</div>
                                 </div>
                             </div>
                         </div>

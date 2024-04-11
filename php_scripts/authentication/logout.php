@@ -6,18 +6,8 @@
  */
 
 # Including all the required scripts for demo
-require "functions.php";
+require_once "functions.php";
 
-# Starting the session
-session_start();
-
-# Closing the session and deleting all values associated with the session
-session_destroy();
-
-// Add GET parameter if user is logged out because no rights
-$noAdmin = (isset($_GET['logout'])) ? "?logout=noAdmin" : "";
-
-# Redirecting the user back to login page
-redirect("../../menu.php" . $noAdmin);
+logout(false);
 
 ?>
