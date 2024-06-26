@@ -109,6 +109,7 @@ WHERE name_player = ?
 ORDER BY date_record
 	,time_record DESC
 ) b
+ORDER BY b.date_record
 ');
 
 
@@ -168,6 +169,7 @@ WHERE joue.name_player = ?
 ORDER BY t1.date_record
 	,time_record DESC
 ) b
+ORDER BY b.date_record;
 ');
 
 
