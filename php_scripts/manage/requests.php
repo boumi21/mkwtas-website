@@ -63,7 +63,7 @@ WHERE id_record = ?
 # Add a new player
 $addPlayer = $bdd->prepare("
 INSERT INTO player VALUES
-(null, ?, ?)
+(null, ?, UPPER(?))
 ");
 
 # Modify an existing player
@@ -71,7 +71,7 @@ $modifyPlayer = $bdd->prepare("
 UPDATE player
 SET 
 name_player = ?,
-country = ?
+country = UPPER(?)
 WHERE id_player = ?
 ");
 
