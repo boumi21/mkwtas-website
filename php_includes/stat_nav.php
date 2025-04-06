@@ -65,7 +65,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link stats-nav-link text-truncate" href="https://plausible.io/mkwtas.com" target="_blank">
+            <a class="nav-link stats-nav-link text-truncate" href="https://data.mkwtas.com/share/EdCRc9Q8X59mTok4/mkwtas.com" target="_blank">
                 <img class="stat-nav-icon" src="assets/img/favicon.png"> <span class="d-sm-inline">Website</span>
             </a>
         </li>

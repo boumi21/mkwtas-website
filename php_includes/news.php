@@ -3,15 +3,15 @@
 
 
 <!-- HTML Part -->
-<a id="link_news" href="https://forms.gle/XucwuMLYJS4rcMnz6" target="_blank" rel="noopener">
+<a id="link_news" href="https://play.mkwtas.com/" target="_blank" rel="noopener">
     <div class="card text-white bg-success card-news mb-3">
-        <span class="text-new">Event!</span>
+        <span class="text-new">New!</span>
         <div class="card-body">
             <div class="flex-row-center">
-                <h5 class="ml-3 mr-3">2022 MKWii TAS Awards Nominations</h5>
-                <i class="icon-news fas fa-award"></i>
+                <h5 class="ml-3 mr-3">MKWii TAS mini-game</h5>
+                <i class="icon-news fas fa-gamepad"></i>
             </div>
-            <i>Close on Sunday, 22 January</i>
+            <i>Each day, a new TASer to guess</i>
         </div>
     </div>
 </a>

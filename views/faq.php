@@ -237,7 +237,7 @@ include PHP_INCLUDES . 'imports_js.php';
                                 , <a href="https://fonts.google.com/">Google Fonts</a>, <a href="https://fontawesome.com/">Font Awesome</a>,
                                 <a href="https://www.amcharts.com/">amcharts</a>,
                                 <a href="https://jquery.com/">jQuery</a>,
-                                <a href="https://plausible.io/docs">Plausible</a>
+                                <a href="https://umami.is/docs">Umami</a>
                                 </p>
                             </div>
                         </div>
@@ -265,6 +265,12 @@ include PHP_INCLUDES . 'imports_js.php';
                         </div>
                         <div class="collapse item-7" role="tabpanel" data-parent="#accordion-1">
                             <div class="card-body">
+                            <p class="card-text">
+                                    <b>V 5.5 (2025/04/06)</b></br>
+                                    * Change items in navigation menu. </br>
+                                    * Links added to <a href="https://play.mkwtas.com/">TASle</a>. </br>
+                                    * Plausible Analytics replaced by <a href="https://umami.is/">Umami</a>. </br>
+                                </p>
                                 <p class="card-text">
                                     <b>V 5.4 (2024/04/11)</b></br>
                                     * Improved security to access admin tools. </br>
@@ -412,8 +418,8 @@ include PHP_INCLUDES . 'imports_js.php';
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-sm">2024</div>
-                                    <div class="col-sm text-right">V 5.4</div>
+                                    <div class="col-sm">2025</div>
+                                    <div class="col-sm text-right">V 5.5</div>
                                 </div>
                             </div>
                         </div>
