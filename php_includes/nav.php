@@ -7,15 +7,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav navbar-nav-menus">
-            <li class="nav-item">
-                <a class="nav-link nav_link_main_nav" href="3laps.php">3 Laps
-                    <span id="icon_3laps" class="nav-icon"></span>
+            <li class="nav-item dropdown">
+                <a class="nav-link nav_link_main_nav dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Best Known Times <i class="fas fa-medal nav-icon"></i>
                 </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link nav_link_main_nav" href="flaps.php">Flaps
-                    <span id="icon_flaps" class="nav-icon"></span>
-                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="3laps.php">3 Laps <span id="icon_3laps" class="nav-icon"></span></a>
+                    <a class="dropdown-item" href="flaps.php">Flaps <span id="icon_flaps" class="nav-icon"></span></a>
+                </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link nav_link_main_nav" href="all.php">Recents
@@ -23,8 +22,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav_link_main_nav" href="stats.php">Statistics
-                    <i class="fas fa-chart-bar nav-icon"></i>
+                <a class="nav-link nav_link_main_nav" href="listPlayers.php">TASers
+                <i class="fas fa-users nav-icon"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav_link_main_nav" href="https://play.mkwtas.com/">Play 
+                <i class="fas fa-gamepad nav-icon"></i>
                 </a>
             </li>
             <li class="nav-item dropdown">
@@ -32,8 +36,8 @@
                     More...
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="listPlayers.php">List of TASers <i class="fas fa-users nav-icon"></i></a>
-                    <a class="dropdown-item" href="listTracks.php">List of Tracks <i class="fas fa-motorcycle"></i></a>
+                    <a class="dropdown-item" href="listTracks.php">Tracks <i class="fas fa-motorcycle"></i></a>
+                    <a class="dropdown-item" href="stats.php">Statistics <i class="fas fa-chart-bar nav-icon"></i></a>
                     <a class="dropdown-item" href="snapshot.php">Snapshots <i class="fas fa-camera-retro nav-icon"></i></a>
                     <a class="dropdown-item" href="faq.php">FAQ <i class="far fa-question-circle"></i></a>
                     <a class="dropdown-item" href="<?php echo GITHUB_REPO ?>">Source Code <i class="fab fa-github"></i></a>
@@ -65,7 +69,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link nav_link_main_nav dropdown-toggle" href="#" id="navbarDropdownAccountLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Account <i class="far fa-user-circle"></i>
+                        Account <i class="far fa-user-circle nav-icon"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownAccountLink">
                         <a class="dropdown-item" href="<?php echo url(DISCORD_ID, LOGIN_URL, "identify"); ?>">Login (admin) <i class="fas fa-sign-in-alt"></i></a>

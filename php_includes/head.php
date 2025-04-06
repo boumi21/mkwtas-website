@@ -1,6 +1,6 @@
 <head>
-    <!-- Snipped for Plausible (analytics). See https://plausible.io/docs -->
-    <script defer data-domain="mkwtas.com" data-api="/stats_plausible/api/event" src="/stats_plausible/js/script.js"></script>
+    <!-- Snipped for Umami (analytics). See https://umami.is/docs -->
+    <!-- Insert Umami snipped here -->
 
 
     <meta name="Description" content="<?php echo $description ?>">
