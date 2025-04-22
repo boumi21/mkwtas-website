@@ -465,6 +465,11 @@ caption {
   color: #000;
 }
 
+.text-new{
+  font-weight: 800;
+  text-shadow: rgb(238, 130, 7) 0 0 0.4em;
+}
+
 
 
 

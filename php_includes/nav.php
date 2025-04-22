@@ -26,11 +26,6 @@
                 <i class="fas fa-users nav-icon"></i>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link nav_link_main_nav" href="https://play.mkwtas.com/">Play 
-                <i class="fas fa-gamepad nav-icon"></i>
-                </a>
-            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link nav_link_main_nav dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     More...
@@ -44,6 +39,11 @@
                     <a class="dropdown-item" href="https://discordapp.com/invite/EPD9yCu">TAS Discord <i class="fab fa-discord"></i></a>
                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalMessage">Send Message <i class="fas fa-paper-plane"></i></a>
                 </div>
+            </li>
+            <li class="nav-item ml-5">
+                <a class="nav-link nav_link_main_nav" href="https://play.mkwtas.com/">TASle
+                <i class="fas fa-gamepad nav-icon"></i> <span class="text-new ml-1">NEW</span>
+                </a>
             </li>
         </ul>
 
