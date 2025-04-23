@@ -470,6 +470,11 @@ caption {
   text-shadow: rgb(238, 130, 7) 0 0 0.4em;
 }
 
+.nav-item:hover{
+  background-color: #4da6ff;
+  border-radius: 5px;
+}
+
 
 
 
