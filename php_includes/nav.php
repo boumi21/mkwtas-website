@@ -42,7 +42,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link nav_link_main_nav" href="https://play.mkwtas.com/">TASle
-                <i class="fas fa-gamepad nav-icon"></i> <span class="text-new ml-1">NEW</span>
+                <i class="fas fa-gamepad nav-icon"></i>
                 </a>
             </li>
         </ul>
