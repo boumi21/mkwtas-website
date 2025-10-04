@@ -34,6 +34,10 @@ hr {
   background-color: #1e90ff;
 }
 
+.navbar-nav {
+  align-items: center;
+}
+
 .main-nav .navbar-nav .nav_link_main_nav {
   color: #EBEBEB;
 }
