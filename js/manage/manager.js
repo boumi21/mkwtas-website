@@ -175,9 +175,11 @@ function verify() {
             e.preventDefault();
         }
 
+        console.log("dadidou");
+
         var playerBeingModified = $("#name-player-hidden").val();
         // If player is being modified, do not process the case we do not change the name of the TASer
-        if (name.toUpperCase() !== playerBeingModified.toUpperCase()) {
+        if (name.toUpperCase() !== playerBeingModified?.toUpperCase()) {
             $.ajax({
                 type: 'GET',
                 'async': false,

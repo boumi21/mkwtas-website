@@ -43,7 +43,7 @@ if (!isUserAdmin()) {
                 <form class="form-manage-player" action="php_scripts/manage/modifyPlayerManager.php" method="POST">
                     <div class="form-group">
                         <label for="inputName">Name *</label>
-                        <input type="text" class="form-control" id="inputName" name="name" aria-describedby="validationName" maxlength="16" value="<?php echo $playerName; ?>">
+                        <input type="text" class="form-control" id="inputName" name="name" aria-describedby="validationName" maxlength="30" value="<?php echo $playerName; ?>">
                         <div id="validationName" class="invalid-feedback">
                             Name cannot be empty or contain the symbol "_"
                         </div>
