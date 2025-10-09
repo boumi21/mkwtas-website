@@ -8078,7 +8078,7 @@ CREATE TABLE `connect_log` (
 
 CREATE TABLE `deleted_player` (
   `id_player` int(11) NOT NULL,
-  `name_player` varchar(16) NOT NULL,
+  `name_player` varchar(255) NOT NULL,
   `country` varchar(2) NOT NULL DEFAULT '00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -8117,7 +8117,7 @@ CREATE TABLE `deleted_record` (
 
 CREATE TABLE `player` (
   `id_player` int(11) NOT NULL,
-  `name_player` varchar(16) NOT NULL,
+  `name_player` varchar(255) NOT NULL,
   `country` varchar(2) NOT NULL DEFAULT '00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

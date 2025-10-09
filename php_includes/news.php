@@ -3,15 +3,15 @@
 
 
 <!-- HTML Part -->
-<a id="link_news" href="https://play.mkwtas.com/" target="_blank" rel="noopener">
+<a id="link_news" href="https://wiki.mkwtas.com/" target="_blank" rel="noopener">
     <div class="card text-white bg-success card-news mb-3">
-        <span class="text-new">New!</span>
+        <span class="text-new-announcement">New!</span>
         <div class="card-body">
             <div class="flex-row-center">
-                <h5 class="ml-3 mr-3">MKWii TAS mini-game</h5>
-                <i class="icon-news fas fa-gamepad"></i>
+                <h5 class="ml-3 mr-3">MKWii TAS Wiki</h5>
+                <i class="icon-news fab fa-wikipedia-w"></i>
             </div>
-            <i>Each day, a new TASer to guess</i>
+            <i>The MKWii TAS book of knowledge</i>
         </div>
     </div>
 </a>
@@ -19,7 +19,7 @@
 
 <!-- CSS Part -->
 <style>
-    .text-new {
+    .text-new-announcement {
         position: absolute;
         margin-top: 0.5em;
         margin-left: 1em;
