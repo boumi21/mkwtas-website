@@ -4,59 +4,55 @@
 // Good luck with some of the requests ( ͡ಥ ͜ʖ ͡ಥ)
 
 /*** Select all BKT from a category ***/
-$getBktFromCategory = $bdd->prepare('SELECT *
-,RIGHT(duree, LENGTH(duree) - 4) AS time_record
-,(
-	SELECT RIGHT(TIMEDIFF(r.time_record, b.duree), LENGTH(b.duree) - 4)
-	FROM record r
-	WHERE b.duree < r.time_record
-		AND r.type_record = b.type_record
-		AND r.id_track = b.id_track
-	ORDER BY r.time_record ASC limit 1
-	) cut
-,(
-	SELECT r.link
-	FROM record r
-	WHERE b.duree < r.time_record
-		AND r.type_record = b.type_record
-		AND r.id_track = b.id_track
-	ORDER BY r.time_record ASC limit 1
-	) prev_lien
-FROM (
-SELECT RIGHT(lap1, LENGTH(lap1) - 6) AS lap1
-	,RIGHT(lap2, LENGTH(lap2) - 6) AS lap2
-	,RIGHT(lap3, LENGTH(lap3) - 6) AS lap3
-	,name_track
-	,time_record AS duree
-	,date_record
-	,DATEDIFF(CURRENT_DATE (), date_record) AS duration
-	,type_record
-	,link
-	,charac
-	,date_option
-	,flap_no_bkt
-	,vehicle
-	,is_supergrind
-	,r.id_track
-	,r.id_tag
-	,rt.NAME AS tag_name
-	,r.id_record AS id_record
-FROM record AS r
-INNER JOIN record_with_players AS p ON r.id_record = p.id_record
-INNER JOIN player AS j ON p.id_player = j.id_player
-INNER JOIN track AS c ON r.id_track = c.id_track
-INNER JOIN record_tags AS rt ON r.id_tag = rt.id_record_tags
-INNER JOIN (
-	SELECT MIN(time_record) AS best_temps
-	FROM record AS re
-	WHERE type_record = ?
-	GROUP BY re.id_track
-	) r ON time_record = r.best_temps
-WHERE type_record = ?
-GROUP BY c.id_track
-ORDER BY c.id_track
-) b
-
+$getBktFromCategory = $bdd->prepare('
+SELECT 
+    RIGHT(lap1, LENGTH(lap1) - 6) AS lap1,
+    RIGHT(lap2, LENGTH(lap2) - 6) AS lap2,
+    RIGHT(lap3, LENGTH(lap3) - 6) AS lap3,
+    t.name_track,
+    RIGHT(r.time_record, LENGTH(r.time_record) - 4) AS time_record,
+    r.date_record,
+    DATEDIFF(CURRENT_DATE(), r.date_record) AS duration,
+    r.type_record,
+    r.link,
+    r.charac,
+    r.date_option,
+    r.flap_no_bkt,
+    r.vehicle,
+    r.is_supergrind,
+    r.id_track,
+    r.id_tag,
+    rt.NAME AS tag_name,
+    r.id_record,
+    (
+        SELECT RIGHT(TIMEDIFF(r2.time_record, r.time_record), LENGTH(r.time_record) - 4)
+        FROM record r2
+        WHERE r.time_record < r2.time_record
+            AND r2.type_record = r.type_record
+            AND r2.id_track = r.id_track
+        ORDER BY r2.time_record ASC 
+        LIMIT 1
+    ) AS cut,
+    (
+        SELECT r2.link
+        FROM record r2
+        WHERE r.time_record < r2.time_record
+            AND r2.type_record = r.type_record
+            AND r2.id_track = r.id_track
+        ORDER BY r2.time_record ASC 
+        LIMIT 1
+    ) AS prev_lien
+FROM record r
+INNER JOIN track t ON r.id_track = t.id_track
+INNER JOIN record_tags rt ON r.id_tag = rt.id_record_tags
+WHERE r.type_record = ?
+    AND r.time_record = (
+        SELECT MIN(time_record)
+        FROM record r2
+        WHERE r2.type_record = ?
+            AND r2.id_track = r.id_track
+    )
+ORDER BY t.id_track
 ');
 
 
