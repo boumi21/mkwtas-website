@@ -266,6 +266,10 @@ include PHP_INCLUDES . 'imports_js.php';
                         <div class="collapse item-7" role="tabpanel" data-parent="#accordion-1">
                             <div class="card-body">
                                 <p class="card-text">
+                                    <b>V 5.7 (2025/10/20)</b></br>
+                                    * Fix bug where wrong BKT would be displayed if two BKT have the exact same time. </br>
+                                </p>
+                                <p class="card-text">
                                     <b>V 5.6 (2025/10/08)</b></br>
                                     * Change items in navigation menu. </br>
                                     * Links added to <a href="https://wiki.mkwtas.com/">the wiki</a>. </br>
@@ -424,7 +428,7 @@ include PHP_INCLUDES . 'imports_js.php';
                                 </div>
                                 <div class="row">
                                     <div class="col-sm">2025</div>
-                                    <div class="col-sm text-right">V 5.6</div>
+                                    <div class="col-sm text-right">V 5.7</div>
                                 </div>
                             </div>
                         </div>

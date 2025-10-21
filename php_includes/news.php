@@ -3,18 +3,37 @@
 
 
 <!-- HTML Part -->
-<a id="link_news" href="https://wiki.mkwtas.com/" target="_blank" rel="noopener">
-    <div class="card text-white bg-success card-news mb-3">
-        <span class="text-new-announcement">New!</span>
-        <div class="card-body">
-            <div class="flex-row-center">
-                <h5 class="ml-3 mr-3">MKWii TAS Wiki</h5>
-                <i class="icon-news fab fa-wikipedia-w"></i>
+<div class="row">
+    <div class="col-md-6">
+        <a id="link_news" href="https://wiki.mkwtas.com/" target="_blank" rel="noopener">
+            <div class="card text-white bg-success card-news mb-3">
+                <span class="text-new-announcement">New!</span>
+                <div class="card-body">
+                    <div class="flex-row-center">
+                        <h5 class="ml-3 mr-3">MKWii TAS Wiki</h5>
+                        <i class="icon-news fab fa-wikipedia-w"></i>
+                    </div>
+                    <i>The MKWii TAS book of knowledge</i>
+                </div>
             </div>
-            <i>The MKWii TAS book of knowledge</i>
-        </div>
+        </a>
+
     </div>
-</a>
+    <div class="col-md-6">
+        <a id="link_news" href="https://www.youtube.com/watch?v=ZCrs7keDpFM" target="_blank" rel="noopener">
+            <div class="card text-white bg-success card-news mb-3">
+                <span class="text-new-announcement">New!</span>
+                <div class="card-body">
+                    <div class="flex-row-center">
+                        <h5 class="ml-3 mr-3">2024 MKWii TAS Awards Results</h5>
+                        <i class="icon-news fab fa-youtube"></i>
+                    </div>
+                    <i>Watch the video</i>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
 
 
 <!-- CSS Part -->

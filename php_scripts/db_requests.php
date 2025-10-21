@@ -4,172 +4,162 @@
 // Good luck with some of the requests ( ͡ಥ ͜ʖ ͡ಥ)
 
 /*** Select all BKT from a category ***/
-$getBktFromCategory = $bdd->prepare('SELECT *
-,RIGHT(duree, LENGTH(duree) - 4) AS time_record
-,(
-	SELECT RIGHT(TIMEDIFF(r.time_record, b.duree), LENGTH(b.duree) - 4)
-	FROM record r
-	WHERE b.duree < r.time_record
-		AND r.type_record = b.type_record
-		AND r.id_track = b.id_track
-	ORDER BY r.time_record ASC limit 1
-	) cut
-,(
-	SELECT r.link
-	FROM record r
-	WHERE b.duree < r.time_record
-		AND r.type_record = b.type_record
-		AND r.id_track = b.id_track
-	ORDER BY r.time_record ASC limit 1
-	) prev_lien
-FROM (
-SELECT RIGHT(lap1, LENGTH(lap1) - 6) AS lap1
-	,RIGHT(lap2, LENGTH(lap2) - 6) AS lap2
-	,RIGHT(lap3, LENGTH(lap3) - 6) AS lap3
-	,name_track
-	,time_record AS duree
-	,date_record
-	,DATEDIFF(CURRENT_DATE (), date_record) AS duration
-	,type_record
-	,link
-	,charac
-	,date_option
-	,flap_no_bkt
-	,vehicle
-	,is_supergrind
-	,r.id_track
-	,r.id_tag
-	,rt.NAME AS tag_name
-	,r.id_record AS id_record
-FROM record AS r
-INNER JOIN record_with_players AS p ON r.id_record = p.id_record
-INNER JOIN player AS j ON p.id_player = j.id_player
-INNER JOIN track AS c ON r.id_track = c.id_track
-INNER JOIN record_tags AS rt ON r.id_tag = rt.id_record_tags
-INNER JOIN (
-	SELECT MIN(time_record) AS best_temps
-	FROM record AS re
-	WHERE type_record = ?
-	GROUP BY re.id_track
-	) r ON time_record = r.best_temps
-WHERE type_record = ?
-GROUP BY c.id_track
-ORDER BY c.id_track
-) b
-
+$getBktFromCategory = $bdd->prepare('
+SELECT 
+    RIGHT(lap1, LENGTH(lap1) - 6) AS lap1,
+    RIGHT(lap2, LENGTH(lap2) - 6) AS lap2,
+    RIGHT(lap3, LENGTH(lap3) - 6) AS lap3,
+    t.name_track,
+    RIGHT(r.time_record, LENGTH(r.time_record) - 4) AS time_record,
+    r.date_record,
+    DATEDIFF(CURRENT_DATE(), r.date_record) AS duration,
+    r.type_record,
+    r.link,
+    r.charac,
+    r.date_option,
+    r.flap_no_bkt,
+    r.vehicle,
+    r.is_supergrind,
+    r.id_track,
+    r.id_tag,
+    rt.NAME AS tag_name,
+    r.id_record,
+    (
+        SELECT RIGHT(TIMEDIFF(r2.time_record, r.time_record), LENGTH(r.time_record) - 4)
+        FROM record r2
+        WHERE r.time_record < r2.time_record
+            AND r2.type_record = r.type_record
+            AND r2.id_track = r.id_track
+        ORDER BY r2.time_record ASC 
+        LIMIT 1
+    ) AS cut,
+    (
+        SELECT r2.link
+        FROM record r2
+        WHERE r.time_record < r2.time_record
+            AND r2.type_record = r.type_record
+            AND r2.id_track = r.id_track
+        ORDER BY r2.time_record ASC 
+        LIMIT 1
+    ) AS prev_lien
+FROM record r
+INNER JOIN track t ON r.id_track = t.id_track
+INNER JOIN record_tags rt ON r.id_tag = rt.id_record_tags
+WHERE r.type_record = ?
+    AND r.time_record = (
+        SELECT MIN(time_record)
+        FROM record r2
+        WHERE r2.type_record = ?
+            AND r2.id_track = r.id_track
+    )
+ORDER BY t.id_track
 ');
 
 
 
 
 /*** Select all TASes from a player ***/
-$getAllByPlayer = $bdd->prepare('SELECT *
-,RIGHT(duree, LENGTH(duree) - 4) AS time_record
-,(
-	SELECT RIGHT(TIMEDIFF(r.time_record, b.duree), LENGTH(b.duree) - 4)
-	FROM record r
-	WHERE b.duree < r.time_record
-		AND r.type_record = b.type_record
-		AND r.id_track = b.id_track
-	ORDER BY r.time_record ASC limit 1
-	) cut
-,(
-	SELECT r.link
-	FROM record r
-	WHERE b.duree < r.time_record
-		AND r.type_record = b.type_record
-		AND r.id_track = b.id_track
-	ORDER BY r.time_record ASC limit 1
-	) prev_lien
-FROM (
-SELECT RIGHT(lap1, LENGTH(lap1) - 6) AS lap1
-	,RIGHT(lap2, LENGTH(lap2) - 6) AS lap2
-	,RIGHT(lap3, LENGTH(lap3) - 6) AS lap3
-	,name_track
-	,time_record AS duree
-	,date_record
-	,DATEDIFF(CURRENT_DATE (), date_record) AS duration
-	,type_record
-	,link
-	,charac
-	,date_option
-	,vehicle
-	,flap_no_bkt
-	,is_supergrind
-	,r.id_track
-	,r.id_tag
-	,rt.NAME AS tag_name
-	,r.id_record AS id_record
-FROM record AS r
-INNER JOIN record_with_players AS p ON r.id_record = p.id_record
-INNER JOIN player AS j ON p.id_player = j.id_player
-INNER JOIN track AS c ON r.id_track = c.id_track
-INNER JOIN record_tags AS rt ON r.id_tag = rt.id_record_tags
-WHERE name_player = ?
-ORDER BY date_record
-	,time_record DESC
-) b
-ORDER BY b.date_record
+$getAllByPlayer = $bdd->prepare('
+SELECT 
+    RIGHT(r.lap1, LENGTH(r.lap1) - 6) AS lap1,
+    RIGHT(r.lap2, LENGTH(r.lap2) - 6) AS lap2,
+    RIGHT(r.lap3, LENGTH(r.lap3) - 6) AS lap3,
+    t.name_track,
+    RIGHT(r.time_record, LENGTH(r.time_record) - 4) AS time_record,
+    r.date_record,
+    DATEDIFF(CURRENT_DATE(), r.date_record) AS duration,
+    r.type_record,
+    r.link,
+    r.charac,
+    r.date_option,
+    r.vehicle,
+    r.flap_no_bkt,
+    r.is_supergrind,
+    r.id_track,
+    r.id_tag,
+    rt.NAME AS tag_name,
+    r.id_record,
+    (
+        SELECT RIGHT(TIMEDIFF(r2.time_record, r.time_record), LENGTH(r.time_record) - 4)
+        FROM record r2
+        WHERE r.time_record < r2.time_record
+            AND r2.type_record = r.type_record
+            AND r2.id_track = r.id_track
+        ORDER BY r2.time_record ASC 
+        LIMIT 1
+    ) AS cut,
+    (
+        SELECT r2.link
+        FROM record r2
+        WHERE r.time_record < r2.time_record
+            AND r2.type_record = r.type_record
+            AND r2.id_track = r.id_track
+        ORDER BY r2.time_record ASC 
+        LIMIT 1
+    ) AS prev_lien
+FROM record r
+INNER JOIN record_with_players p ON r.id_record = p.id_record
+INNER JOIN player j ON p.id_player = j.id_player
+INNER JOIN track t ON r.id_track = t.id_track
+INNER JOIN record_tags rt ON r.id_tag = rt.id_record_tags
+WHERE j.name_player = ?
+ORDER BY r.date_record, r.time_record DESC
 ');
 
 
 
 /*** Select all BKT from a player ***/
-$getBKTByPlayer = $bdd->prepare('SELECT *
-,RIGHT(duree, LENGTH(duree) - 4) AS time_record
-,(
-	SELECT RIGHT(TIMEDIFF(r.time_record, b.duree), LENGTH(b.duree) - 4)
-	FROM record r
-	WHERE b.duree < r.time_record
-		AND r.type_record = b.type_record
-		AND r.id_track = b.id_track
-	ORDER BY r.time_record ASC limit 1
-	) cut
-,(
-	SELECT r.link
-	FROM record r
-	WHERE b.duree < r.time_record
-		AND r.type_record = b.type_record
-		AND r.id_track = b.id_track
-	ORDER BY r.time_record ASC limit 1
-	) prev_lien
-FROM (
-SELECT RIGHT(lap1, LENGTH(lap1) - 6) AS lap1
-	,RIGHT(lap2, LENGTH(lap2) - 6) AS lap2
-	,RIGHT(lap3, LENGTH(lap3) - 6) AS lap3
-	,cir.name_track
-	,time_record AS duree
-	,t1.date_record
-	,DATEDIFF(CURRENT_DATE (), t1.date_record) AS duration
-	,t1.type_record
-	,t1.link
-	,t1.charac
-	,t1.flap_no_bkt
-	,t1.date_option
-	,t1.vehicle
-	,t1.id_track
-	,t1.id_tag
-	,rt.NAME AS tag_name
-	,t1.is_supergrind
-	,t1.id_record
-FROM record t1
-INNER JOIN (
-	SELECT MIN(time_record) AS min_value
-		,type_record
-	FROM record
-	GROUP BY type_record
-		,id_track
-	) AS t2 ON t1.type_record = t2.type_record
-	AND t1.time_record = t2.min_value
-INNER JOIN record_with_players pos ON t1.id_record = pos.id_record
-INNER JOIN track cir ON t1.id_track = cir.id_track
-INNER JOIN record_tags AS rt ON t1.id_tag = rt.id_record_tags
-INNER JOIN player joue ON pos.id_player = joue.id_player
-WHERE joue.name_player = ?
-ORDER BY t1.date_record
-	,time_record DESC
-) b
-ORDER BY b.date_record;
+$getBKTByPlayer = $bdd->prepare('
+SELECT 
+    RIGHT(r.lap1, LENGTH(r.lap1) - 6) AS lap1,
+    RIGHT(r.lap2, LENGTH(r.lap2) - 6) AS lap2,
+    RIGHT(r.lap3, LENGTH(r.lap3) - 6) AS lap3,
+    t.name_track,
+    RIGHT(r.time_record, LENGTH(r.time_record) - 4) AS time_record,
+    r.date_record,
+    DATEDIFF(CURRENT_DATE(), r.date_record) AS duration,
+    r.type_record,
+    r.link,
+    r.charac,
+    r.date_option,
+    r.flap_no_bkt,
+    r.vehicle,
+    r.is_supergrind,
+    r.id_track,
+    r.id_tag,
+    rt.NAME AS tag_name,
+    r.id_record,
+    (
+        SELECT RIGHT(TIMEDIFF(r2.time_record, r.time_record), LENGTH(r.time_record) - 4)
+        FROM record r2
+        WHERE r.time_record < r2.time_record
+            AND r2.type_record = r.type_record
+            AND r2.id_track = r.id_track
+        ORDER BY r2.time_record ASC 
+        LIMIT 1
+    ) AS cut,
+    (
+        SELECT r2.link
+        FROM record r2
+        WHERE r.time_record < r2.time_record
+            AND r2.type_record = r.type_record
+            AND r2.id_track = r.id_track
+        ORDER BY r2.time_record ASC 
+        LIMIT 1
+    ) AS prev_lien
+FROM record r
+INNER JOIN record_with_players p ON r.id_record = p.id_record
+INNER JOIN player j ON p.id_player = j.id_player
+INNER JOIN track t ON r.id_track = t.id_track
+INNER JOIN record_tags rt ON r.id_tag = rt.id_record_tags
+WHERE j.name_player = ?
+    AND r.time_record = (
+        SELECT MIN(time_record)
+        FROM record r2
+        WHERE r2.type_record = r.type_record
+            AND r2.id_track = r.id_track
+    )
+ORDER BY r.date_record, r.time_record DESC
 ');
 
 
@@ -318,142 +308,42 @@ ORDER BY date_record
 
 
 /*** Select all players that hold at least a BKT in 3 LAPS and count them ***/
-$getCountRecords3Laps = $bdd->prepare('SELECT name_player
-,SUM(nbrRecord) AS totalRecord
-FROM (
-(
-	SELECT name_player
-		,COUNT(r.id_record) AS nbrRecord
-		,type_record
-		,time_record
-	FROM record AS r
-	INNER JOIN record_with_players AS p ON r.id_record = p.id_record
-	INNER JOIN player AS j ON p.id_player = j.id_player
-	INNER JOIN (
-		SELECT MIN(time_record) AS best_temps
-		FROM record AS re
-		WHERE type_record = "classic"
-		GROUP BY re.id_track
-		) r ON time_record = r.best_temps
-	WHERE type_record = "classic"
-	GROUP BY j.name_player
-	ORDER BY nbrRecord DESC
-	)
-
-UNION ALL
-
-(
-	SELECT name_player
-		,COUNT(r.id_record) AS nbrRecord
-		,type_record
-		,time_record
-	FROM record AS r
-	INNER JOIN record_with_players AS p ON r.id_record = p.id_record
-	INNER JOIN player AS j ON p.id_player = j.id_player
-	INNER JOIN (
-		SELECT MIN(time_record) AS best_temps
-		FROM record AS re
-		WHERE type_record = "no_glitch"
-		GROUP BY re.id_track
-		) r ON time_record = r.best_temps
-	WHERE type_record = "no_glitch"
-	GROUP BY j.name_player
-	ORDER BY nbrRecord DESC
-	)
-
-UNION ALL
-
-(
-	SELECT name_player
-		,COUNT(r.id_record) AS nbrRecord
-		,type_record
-		,time_record
-	FROM record AS r
-	INNER JOIN record_with_players AS p ON r.id_record = p.id_record
-	INNER JOIN player AS j ON p.id_player = j.id_player
-	INNER JOIN (
-		SELECT MIN(time_record) AS best_temps
-		FROM record AS re
-		WHERE type_record = "no_cut"
-		GROUP BY re.id_track
-		) r ON time_record = r.best_temps
-	WHERE type_record = "no_cut"
-	GROUP BY j.name_player
-	ORDER BY nbrRecord DESC
-	)
-) r
-GROUP BY name_player
+$getCountRecords3Laps = $bdd->prepare('
+SELECT 
+    j.name_player,
+    COUNT(r.id_record) AS totalRecord
+FROM player j
+INNER JOIN record_with_players p ON j.id_player = p.id_player
+INNER JOIN record r ON p.id_record = r.id_record
+WHERE r.type_record IN ("classic", "no_glitch", "no_cut")
+    AND r.time_record = (
+        SELECT MIN(time_record)
+        FROM record r2
+        WHERE r2.type_record = r.type_record
+            AND r2.id_track = r.id_track
+    )
+GROUP BY j.name_player
 ORDER BY totalRecord DESC
 ');
 
 
 
 /*** Select all players that hold at least a BKT in FLAPS and count them ***/
-$getCountRecordsFlaps = $bdd->prepare('SELECT name_player
-,SUM(nbrRecord) AS totalRecord
-FROM (
-(
-	SELECT name_player
-		,COUNT(r.id_record) AS nbrRecord
-		,type_record
-		,time_record
-	FROM record AS r
-	INNER JOIN record_with_players AS p ON r.id_record = p.id_record
-	INNER JOIN player AS j ON p.id_player = j.id_player
-	INNER JOIN (
-		SELECT MIN(time_record) AS best_temps
-		FROM record AS re
-		WHERE type_record = "flap"
-		GROUP BY re.id_track
-		) r ON time_record = r.best_temps
-	WHERE type_record = "flap"
-	GROUP BY j.name_player
-	ORDER BY nbrRecord DESC
-	)
-
-UNION ALL
-
-(
-	SELECT name_player
-		,COUNT(r.id_record) AS nbrRecord
-		,type_record
-		,time_record
-	FROM record AS r
-	INNER JOIN record_with_players AS p ON r.id_record = p.id_record
-	INNER JOIN player AS j ON p.id_player = j.id_player
-	INNER JOIN (
-		SELECT MIN(time_record) AS best_temps
-		FROM record AS re
-		WHERE type_record = "flap_no_glitch"
-		GROUP BY re.id_track
-		) r ON time_record = r.best_temps
-	WHERE type_record = "flap_no_glitch"
-	GROUP BY j.name_player
-	ORDER BY nbrRecord DESC
-	)
-
-UNION ALL
-
-(
-	SELECT name_player
-		,COUNT(r.id_record) AS nbrRecord
-		,type_record
-		,time_record
-	FROM record AS r
-	INNER JOIN record_with_players AS p ON r.id_record = p.id_record
-	INNER JOIN player AS j ON p.id_player = j.id_player
-	INNER JOIN (
-		SELECT MIN(time_record) AS best_temps
-		FROM record AS re
-		WHERE type_record = "flap_no_cut"
-		GROUP BY re.id_track
-		) r ON time_record = r.best_temps
-	WHERE type_record = "flap_no_cut"
-	GROUP BY j.name_player
-	ORDER BY nbrRecord DESC
-	)
-) r
-GROUP BY name_player
+$getCountRecordsFlaps = $bdd->prepare('
+SELECT 
+    j.name_player,
+    COUNT(r.id_record) AS totalRecord
+FROM player j
+INNER JOIN record_with_players p ON j.id_player = p.id_player
+INNER JOIN record r ON p.id_record = r.id_record
+WHERE r.type_record IN ("flap", "flap_no_glitch", "flap_no_cut")
+    AND r.time_record = (
+        SELECT MIN(time_record)
+        FROM record r2
+        WHERE r2.type_record = r.type_record
+            AND r2.id_track = r.id_track
+    )
+GROUP BY j.name_player
 ORDER BY totalRecord DESC
 ');
 
@@ -544,7 +434,7 @@ GROUP BY j.name_player
 
 
 /**********************************************************************************************************/
-/***********************SNAPSHOT********************************/
+/***********************SNAPSHOT (DEPRECIATED)********************************/
 
 
 /*** Select all BKT from 3 Laps or flaps ***/
